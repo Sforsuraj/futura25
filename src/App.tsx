@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/futura2025.vercel.app" element={<Home />} />
+        <Home/>
         <Route path="/event/:id" element={<EventDetail />} />
         <Route path="/register/:id" element={<RegisterPage />} />
       </Routes>
