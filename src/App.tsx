@@ -7,8 +7,8 @@ import RegisterPage from "./pages/Register";
 const App: React.FC = () => {
   return (
     <Router>
-      <Home/>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/event/:id" element={<EventDetail />} />
         <Route path="/register/:id" element={<RegisterPage />} />
       </Routes>
