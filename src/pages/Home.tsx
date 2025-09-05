@@ -15,7 +15,7 @@ const sponsors: string[] = Object.values(
 
 const heroVideo: string = Object.values(
   import.meta.glob('../assets/*.{mp4,webm}', { eager: true, import: 'default' })
-)[0];
+)[0] as string;
 
 const faqList = [
   { question: "How do I register?", answer: "Click the Register Now button on the hero section." },
