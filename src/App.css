@@ -1,0 +1,558 @@
+/* ---------------------- Global ---------------------- */
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------- Header ---------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff4d4f;
+}
+
+
+
+/* ---------------------- Hamburger ---------------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* ---------------------- Hero ---------------------- */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* ---------------------- countdown start ---------------------- */
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.countdown-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.timer {
+  display: flex;
+  gap: 20px;
+}
+
+.time-segment {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
+  border-radius: 12px;
+  min-width: 80px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.label {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* ---------------------- countdown end ---------------------- */
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background-color: #000000;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #3c3c3c;
+}
+
+/* ---------------------- Events ---------------------- */
+.events-container {
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
+
+.events-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ---------------------- Event Schedule ---------------------- */
+.event-time {
+  background: #ffffff;
+  color: #333;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3rem 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.event-time h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------- Gallery ---------------------- */
+.gallery {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------------------- Sponsors ---------------------- */
+.sponsors {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.sponsors h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.sponsor-logos img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------- FAQ ---------------------- */
+.faq {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  color: #555;
+}
+
+/* ---------------------- Footer ---------------------- */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ---------------------- Event Detail ---------------------- */
+.event-detail {
+  max-width: 600px;
+  margin: 120px auto 50px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.event-detail h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.event-detail p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ---------------------- Registration ---------------------- */
+.register-container {
+  max-width: 500px;
+  margin: 100px auto 50px;
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.register-container h2 {
+  margin-bottom: 25px;
+  font-size: 1.75rem;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px; 
+  font-size: 1rem;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.member-container {
+  background: #f7f7f7;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.member-container h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #0077ff;
+}
+
+.member-container input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.add-member, .remove-member {
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.add-member:hover, .remove-member:hover {
+  background-color: #005bb5;
+}
+
+.remove-member {
+  background-color: #ff4d4f;
+}
+
+.remove-member:hover {
+  background-color: #c0392b;
+}
+
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    display: none;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------------------- Responsive ---------------------- */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+
+  .events-container h2,
+  .gallery h2,
+  .sponsors h2,
+  .faq h2 {
+    font-size: 1.8rem;
+  }
+
+  .cards {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-logos {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .navbar {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-content button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .event-time,
+  .event-detail,
+  .register-container {
+    margin: 80px 1rem 50px;
+    padding: 20px;
+  }
+
+  .cards {
+    gap: 1rem;
+  }
+}
