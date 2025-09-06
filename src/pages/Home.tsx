@@ -18,9 +18,15 @@ const heroVideo: string = Object.values(
 )[0] as string;
 
 const faqList = [
-  { question: "How do I register?", answer: "Click the Register Now button on the hero section." },
-  { question: "What are the event dates?", answer: "The symposium is on 10th - 12th December 2025." },
-  { question: "Is there a registration fee?", answer: "No, it’s completely free for students." },
+  { question: "Will lunch be provided ?", answer: "Yes. Lunch will be provided to all the participants." },
+  { question: "Reporting time ?", answer: "Participants should report at 9.00 AM" },
+  { question: "How many events can a participant participate in ?", answer: "A participant who have registered for coding event can participate in one non-technical event. If participants in coding event do not advance to the second round, they will have the opportunity to participate in a non-technical event of their choice." },
+  { question: "Is there any registration fee ?", answer: "No. There is no registration fee." },
+  { question: "Will there be any certificates ?", answer: "Yes. Certificates will be provided to all the participants." },
+  { question: "Is Guardian allowed ?", answer: "No, only the participants are allowed." },
+  { question: "Will OD recommendation letters be provided ?", answer: "No recommendation letter will be provided instead you will receive an invite from our side after registration." },
+  { question: "Dress Code ?", answer: "Formal Dress Code is mandatory and participants without their ID cards are not allowed." },
+  { question: "Need to bring Laptops ?", answer: "Yes, Participants who're participating in Technical events must bring their Laptops." },
 ];
 
 const Home: React.FC = () => {
