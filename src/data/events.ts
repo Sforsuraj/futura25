@@ -5,14 +5,15 @@ export interface Event {
 }
 
 export const technicalEvents: Event[] = [
-  { id: "1", title: "Coding Marathon", desc: "Compete in programming challenges." },
-  { id: "2", title: "AI Workshop", desc: "Learn about AI and ML." },
-  { id: "3", title: "Robotics Challenge", desc: "Build and program robots." },
+  { id: "1", title: "Cinelytics", desc: "Data analytics" },
+  { id: "2", title: "power point padam", desc: "Ppt" },
+  { id: "3", title: "coder dhinam", desc: "Coding" },
+  { id: "4", title: "Jolly oh Gymkhana", desc: "Game" },
 ];
 
 export const nonTechnicalEvents: Event[] = [
-  { id: "4", title: "Photography Contest", desc: "Show your creative skills." },
-  { id: "5", title: "Debate Competition", desc: "Express your thoughts." },
+  { id: "5", title: "mystic reels and logic wheels", desc: "Decription" },
+  { id: "6", title: "Cine Citizens", desc: "Music and movie event name" },
 ];
 
 export const allEvents: Event[] = [...technicalEvents, ...nonTechnicalEvents];
