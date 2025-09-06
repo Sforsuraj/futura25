@@ -24,7 +24,7 @@ const RegisterSheet = () => {
   useEffect(() => {
     const dbRef = ref(database, "/registrations");
 
-    const listener = onValue(dbRef, (snapshot) => {
+    const listener = (snapshot: any) => {
       const val = snapshot.val() as Record<string, any>;
       const tableData: TeamRegistration[] = [];
 
@@ -43,9 +43,11 @@ const RegisterSheet = () => {
       }
 
       setRegistrations(tableData);
-    });
+    };
 
-    return () => off(dbRef);
+    onValue(dbRef, listener);
+
+    return () => off(dbRef, "value", listener);
   }, []);
 
   // Group registrations by eventId
