@@ -71,7 +71,6 @@ const Home: React.FC = () => {
       {/* Events */}
       <section id="events" className="events-container">
         <h2>Technical Events</h2>
-        <Link to={`/registersheet`}>Click me</Link>
         <div className="cards">
           {technicalEvents.map((event) => (
             <Link key={event.id} to={`/event/${event.id}`}>
