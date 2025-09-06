@@ -436,6 +436,25 @@ body {
   background-color: #c0392b;
 }
 
+/* ---------------------- event schedule ---------------------- */
+/* Schedule time item */
+.time-item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 10px 0;
+  margin-left: 15%;
+}
+.time {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ff4d4f;
+}
+.action {
+  font-size: 1.1rem;
+  color: #333;
+}
+
 
 /* Mobile view styles */
 @media (max-width: 768px) {

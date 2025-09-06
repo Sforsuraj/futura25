@@ -29,6 +29,20 @@ const faqList = [
   { question: "Need to bring Laptops ?", answer: "Yes, Participants who're participating in Technical events must bring their Laptops." },
 ];
 
+const scheduleList=[
+  {time:"09:00 AM",action:"Assembly"},
+  {time:"09:15 AM",action:"Inaugural Ceremony"},
+  {time:"10:00 AM",action:"Start of Technical Events"},
+  {time:"11:15 AM",action:"End of First Round for Coding Event"},
+  {time:"11:15 AM",action:"Snacks Break"},
+  {time:"11:30 AM",action:"Start of Non-Technical Events and Next Round of Coding Event"},
+  {time:"01:00 PM",action:"End of All Events"},
+  {time:"01:15 PM",action:"Lunch Break"},
+  {time:"02:30 PM",action:"Assembly for Valedictory"},
+  {time:"02:45 PM",action:"Valedictory Ceremony"},
+  {time:"04:00 PM",action:"Event Conclusion"},
+]
+
 const Home: React.FC = () => {
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -104,11 +118,12 @@ const Home: React.FC = () => {
       {/* Schedule */}
       <section id="schedule" className="event-time">
         <h2>Event Schedule</h2>
-        <p>
-          Symposium Dates: 10th - 12th December 2025
-          <br />
-          Timings: 9:00 AM - 6:00 PM
-        </p>
+        {scheduleList.map((item, idx) => (
+          <div key={idx} className="time-item">
+            <span className="time">{item.time}</span>
+            <span className="action">{item.action}</span>
+          </div>
+        ))}
       </section>
 
       {/* Gallery */}
