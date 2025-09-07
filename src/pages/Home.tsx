@@ -54,8 +54,8 @@ const Home: React.FC = () => {
     <div className="App">
       {/* Header */}
       <header className="header">
-        <div className="logo">Symposium 2025</div>
-
+        {/*<div className="logo"></div>*/}
+        <img src="src\assets\logo.png" style={{width:120}}></img>
         <nav className={`navbar ${isMobileMenuOpen ? "active" : ""}`}>
           <a href="#hero" onClick={toggleMenu}>Home</a>
           <a href="#events" onClick={toggleMenu}>Events</a>
