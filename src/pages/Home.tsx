@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { technicalEvents, nonTechnicalEvents } from "../data/events";
 import CountdownTimer from "./CountdownTimer";
+import logo from '../assets/logo.png';
 
 // Dynamic imports for assets
 const galleryImages: string[] = Object.values(
@@ -55,7 +56,7 @@ const Home: React.FC = () => {
       {/* Header */}
       <header className="header">
         {/*<div className="logo"></div>*/}
-        <img src="src\assets\logo.png" style={{width:120}}></img>
+        <img src={logo} style={{width:120}}></img>
         <nav className={`navbar ${isMobileMenuOpen ? "active" : ""}`}>
           <a href="#hero" onClick={toggleMenu}>Home</a>
           <a href="#events" onClick={toggleMenu}>Events</a>
