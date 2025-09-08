@@ -1,7 +1,7 @@
 /* ---------------------- Global ---------------------- */
 html {
   scroll-behavior: smooth;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background-color: #f7f7f7;
-  color: #333;
+  background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+  color: #e5e5e5;
   margin: 0;
   padding: 0;
 }
@@ -23,8 +23,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.85);
-  color: white;
+  background: rgba(0,0,0,0.95);
+  color: #FFD700;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,11 +32,14 @@ body {
   z-index: 1000;
   backdrop-filter: blur(5px);
   flex-wrap: wrap;
+  box-shadow: 0 4px 20px rgba(255,215,0,0.4);
 }
 
 .logo {
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  color: #FFD700;
+  text-shadow: 0 0 12px #ff4d4f;
 }
 
 .navbar {
@@ -47,17 +50,16 @@ body {
 }
 
 .navbar a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 
 .navbar a:hover {
-  color: #ff4d4f;
+  color: #FFD700;
+  text-shadow: 0 0 8px #FFD700;
 }
-
-
 
 /* ---------------------- Hamburger ---------------------- */
 .hamburger {
@@ -70,7 +72,7 @@ body {
 .bar {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: #FFD700;
   transition: 0.3s;
   border-radius: 2px;
 }
@@ -83,16 +85,62 @@ body {
   overflow: hidden;
 }
 
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
 
-/* ---------------------- countdown start ---------------------- */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 1rem;
+}
 
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #FFD700;
+  text-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ff4d4f;
+  font-weight: 500;
+}
+
+.hero-content button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #ff4d4f, #e50914);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+}
+
+.hero-content button:hover {
+  background: linear-gradient(90deg, #FFD700, #ff4d4f);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.6);
+  color: #000;
+}
+
+/* ---------------------- Countdown ---------------------- */
 .countdown-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #000000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Orbitron', sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -101,6 +149,8 @@ body {
   font-size: 3rem;
   margin-bottom: 30px;
   letter-spacing: 2px;
+  color: #FFD700;
+  text-shadow: 0 0 15px #ff4d4f;
 }
 
 .timer {
@@ -109,66 +159,27 @@ body {
 }
 
 .time-segment {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(20, 20, 20, 0.9);
   padding: 20px 25px;
   border-radius: 12px;
   min-width: 80px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+  border: 2px solid #FFD700;
 }
 
 .number {
   font-size: 2.5rem;
   font-weight: bold;
   display: block;
+  color: #FFD700;
+  text-shadow: 0 0 10px #ff4d4f;
 }
 
 .label {
   font-size: 1rem;
   opacity: 0.8;
   margin-top: 5px;
-}
-
-/* ---------------------- countdown end ---------------------- */
-
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 0 1rem;
-}
-
-.hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.hero-content button {
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  background-color: #000000;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.hero-content button:hover {
-  background-color: #3c3c3c;
+  color: #fff;
 }
 
 /* ---------------------- Events ---------------------- */
@@ -180,6 +191,8 @@ body {
 .events-container h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: #FFD700;
+  text-shadow: 0 0 12px #ff4d4f;
 }
 
 .cards {
@@ -191,43 +204,49 @@ body {
 }
 
 .card {
-  background: #ffffff;
+  background: linear-gradient(145deg, #1c1c1c, #292929);
   padding: 2rem;
   border-radius: 12px;
   width: 250px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(255,215,0,0.2);
+  border: 2px solid #FFD700;
+  transition: transform 0.4s, box-shadow 0.4s;
+  color: white;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255,215,0,0.4);
 }
 
 .card h3 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
+  color: #FFD700;
+  font-weight: bold;
 }
 
 .card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #ccc;
 }
 
 /* ---------------------- Event Schedule ---------------------- */
 .event-time {
-  background: #ffffff;
-  color: #333;
+  background: #1a1a1a;
+  color: #e5e5e5;
   padding: 3rem 2rem;
   text-align: center;
   border-radius: 10px;
   margin: 3rem 2rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(255,215,0,0.15);
+  border: 2px solid #FFD700;
 }
 
 .event-time h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #FFD700;
 }
 
 /* ---------------------- Gallery ---------------------- */
@@ -239,6 +258,7 @@ body {
 .gallery h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #FFD700;
 }
 
 .gallery-grid {
@@ -250,24 +270,28 @@ body {
 .gallery-grid img {
   width: 100%;
   border-radius: 12px;
+  border: 4px solid #FFD700;
   object-fit: cover;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 15px rgba(255,215,0,0.3);
 }
 
 .gallery-grid img:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255,215,0,0.5);
 }
 
 /* ---------------------- Sponsors ---------------------- */
 .sponsors {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #f0f0f0;
+  background: #111;
 }
 
 .sponsors h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #FFD700;
 }
 
 .sponsor-logos {
@@ -281,11 +305,13 @@ body {
   width: 150px;
   height: 80px;
   object-fit: contain;
-  transition: transform 0.3s;
+  filter: grayscale(100%);
+  transition: all 0.3s;
 }
 
 .sponsor-logos img:hover {
-  transform: scale(1.1);
+  filter: grayscale(0) brightness(1.2);
+  transform: scale(1.15);
 }
 
 /* ---------------------- FAQ ---------------------- */
@@ -297,6 +323,7 @@ body {
 .faq h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #FFD700;
 }
 
 .faq-list {
@@ -306,101 +333,124 @@ body {
 }
 
 .faq-item {
-  background: #ffffff;
+  background: #1a1a1a;
   border-radius: 10px;
   margin-bottom: 1rem;
   cursor: pointer;
   padding: 1rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(255,215,0,0.1);
+  transition: all 0.3s;
+  border: 1px solid #FFD700;
 }
 
 .faq-item:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(255,215,0,0.25);
 }
 
 .faq-question {
   font-weight: bold;
+  color: #FFD700;
 }
 
 .faq-answer {
   margin-top: 0.5rem;
   padding-left: 1rem;
-  color: #555;
+  color: #ccc;
 }
 
 /* ---------------------- Footer ---------------------- */
 .footer {
-  background: #111;
-  color: white;
+  background: #000;
+  color: #FFD700;
   text-align: center;
   padding: 2rem;
+  border-top: 3px dashed #FFD700;
+  text-shadow: 0 0 8px #ff4d4f;
 }
 
 /* ---------------------- Event Detail ---------------------- */
 .event-detail {
   max-width: 600px;
   margin: 120px auto 50px;
-  background-color: white;
+  background-color: #1a1a1a;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.2);
+  border: 2px solid #FFD700;
 }
 
 .event-detail h2 {
   margin-bottom: 20px;
   font-size: 2rem;
+  color: #FFD700;
 }
 
 .event-detail p {
   margin-bottom: 30px;
   font-size: 1rem;
-  color: #555;
+  color: #ccc;
 }
 
 /* ---------------------- Registration ---------------------- */
 .register-container {
   max-width: 500px;
   margin: 100px auto 50px;
-  background-color: white;
+  background-color: #1a1a1a;
   padding: 30px 25px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.2);
   text-align: center;
+  border: 2px solid #FFD700;
 }
 
 .register-container h2 {
   margin-bottom: 25px;
   font-size: 1.75rem;
+  color: #FFD700;
 }
 
 .register-form input {
   width: 100%;
   padding: 12px 15px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #FFD700;
   border-radius: 8px; 
   font-size: 1rem;
+  background: #111;
+  color: #fff;
 }
 
 .register-form button {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
+  background: linear-gradient(90deg, #ff4d4f, #FFD700);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.register-form button:hover {
+  background: linear-gradient(90deg, #FFD700, #ff4d4f);
+  color: #fff;
 }
 
 .member-container {
-  background: #f7f7f7;
+  background: #111;
   padding: 15px 20px;
   margin-bottom: 15px;
   border-radius: 10px;
   position: relative;
+  border: 1px solid #FFD700;
 }
 
 .member-container h3 {
   margin-bottom: 10px;
   font-size: 1.1rem;
-  color: #0077ff;
+  color: #FFD700;
 }
 
 .member-container input {
@@ -408,12 +458,14 @@ body {
   padding: 10px 12px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #FFD700;
   font-size: 0.95rem;
+  background: #1a1a1a;
+  color: #fff;
 }
 
 .add-member, .remove-member {
-  background-color: #0077ff;
+  background: #ff4d4f;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -421,10 +473,12 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: all 0.3s;
 }
 
 .add-member:hover, .remove-member:hover {
-  background-color: #005bb5;
+  background-color: #FFD700;
+  color: #000;
 }
 
 .remove-member {
@@ -432,11 +486,11 @@ body {
 }
 
 .remove-member:hover {
-  background-color: #c0392b;
+  background-color: #FFD700;
+  color: #000;
 }
 
-/* ---------------------- event schedule ---------------------- */
-/* Schedule time item */
+/* ---------------------- Event Schedule ---------------------- */
 .time-item {
   display: flex;
   align-items: center;
@@ -447,15 +501,14 @@ body {
 .time {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #ff4d4f;
+  color: #FFD700;
 }
 .action {
   font-size: 1.1rem;
-  color: #333;
+  color: #fff;
 }
 
-
-/* Mobile view styles */
+/* ---------------------- Responsive ---------------------- */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -484,7 +537,6 @@ body {
   }
 }
 
-/* ---------------------- Responsive ---------------------- */
 @media (max-width: 992px) {
   .hero-content h1 {
     font-size: 3rem;
@@ -574,4 +626,3 @@ body {
     gap: 1rem;
   }
 }
-/* ---------------------- Specific Page Styles ---------------------- */
