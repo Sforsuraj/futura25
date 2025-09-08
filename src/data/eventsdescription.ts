@@ -60,4 +60,44 @@ export const allEvents = [
       },
     ],
   },
+  {
+  id: "6",
+    title: "CINE CITIZENS: A DEEP DIVE INTO KOLLYWOOD.",
+    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+    sections: [
+      {
+        heading: "Team Dynamics",
+        content: "Form teams and dive into a nostalgic journey through Tamil cinema of the 90s and 2k. Collaboration and quick thinking are key as teammates rely on each other’s strengths—from recalling iconic dialogues and recognizing legendary stars to identifying BGMs and acting out movie titles.",
+      },
+      {
+        heading: "Event Structure",
+        subsections: [
+          {
+            subheading: "",
+            content: "A four-round throwback challenge. Each round blends puzzles, memory, and playful twists, all designed to spark the memories of growing up in the 90s and 2k.",
+          },
+          {
+            subheading: "Round 1 – Online",
+            content: "Round 1 is an online Tamil movie musical quiz with MCQs on 90s-2k films, actors, and iconic dialogues. Top scorers advance, celebrating nostalgia through interactive digital fun.",
+          },
+          {
+            subheading: "Round 2",
+            content: "In this round, participants will see photos of directors, heroes, and heroines from iconic 90s and 2k Tamil movies. Their task is to identify the movies associated with these images, testing both their visual memory and cinematic knowledge in a thrilling, competitive format.",
+          },
+          {
+            subheading: "Round 3",
+            content: "In this round, a background music (BGM) clip from a classic 90s or 2k Tamil movie will be played. Participants must identify the music director. Along with the BGM, a movie picture will be shown, prompting questions about the movie’s director, hero, heroine, or the movie title itself.",
+          },
+          {
+            subheading: "Round 3 - Final",
+            content: "In the thrilling final round, one teammate from each team acts out movie titles conveyed through Dumb Charades, while others guess within a time limit. Alongside this, teams tackle a 'Connection Game,' deciphering links between pictures or clues tied to a single movie or song. Adding to the excitement, teams can use creative sabotages to challenge opponents",
+          },
+        ],
+      },
+      {
+        heading: "Bonus Fun",
+        content: "Expect surprising musical cues, cinematic twists, and a joyous celebration of 90s–2k movies and melodies throughout the event.",
+      },
+    ],
+  },
 ];
