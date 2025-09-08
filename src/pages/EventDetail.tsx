@@ -21,7 +21,9 @@ const EventDetail: React.FC = () => {
           {section.subsections && section.subsections.map((sub, subIdx) => (
             <div key={subIdx} style={{ marginTop: "1rem", paddingLeft: "1rem" }}>
               <h3>{sub.subheading}</h3>
-              <p>{sub.content}</p>
+              {sub.content && sub.content.split('\n').map((line, i) => (
+                <p key={i} style={{ margin: 0 }}>{line}</p>
+              ))}
             </div>
           ))}
         </div>

@@ -2,35 +2,39 @@ export const allEvents = [
   {
     id: "3",
     title: "CODER DHINAM: A Day of Logic, Teamwork, and Clean Code",
-    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+    desc: "",
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Work in pairs and bring your combined skills...",
+        content: "Work in pairs and bring your combined skills to the table. Coder Dhinam is designed to test how well you think, code, and collaborate. It’s not just about writing programs—it’s about solving problems thoughtfully and efficiently as a team.",
       },
       {
         heading: "Event Structure",
         subsections: [
           {
+            subheading: "",
+            content: "The competition is divided into two rounds, each focusing on different aspects of coding:",
+          },
+          {
             subheading: "Round 1 – Online Quiz",
-            content: "This round will be held on platforms like HackerRank...",
+            content: "TThis round will be held on platforms like HackerRank. Participants will answer multiple-choice questions, including predicting outputs for given programs and tackling conceptual challenges. Accuracy and quick thinking are key to moving forward.",
           },
           {
             subheading: "Round 2 – Problem-Solving Challenge",
-            content: "Each team will choose one of three sets of problems...",
+            content: "In the final round, each team will choose one of three sets of problems, varying in difficulty from easy to hard. Solutions will be reviewed not only for correctness but also for efficiency. The team with the most effective and optimized code will emerge as the winner.",
           },
         ],
       },
       {
         heading: "What to Expect",
-        content: "Coder Dhinam combines the excitement of a challenge...",
+        content: "Coder Dhinam combines the excitement of a challenge with the clarity of a well-structured test. It’s an opportunity to showcase technical skills, logical thinking, and teamwork—all in one event.",
       },
     ],
   },
   // Add more events similarly...
   {
-  id: "2",
-    title: "CODER DHINAM: A Day of Logic, Teamwork, and Clean Code",
+  id: "5",
+    title: "Mystic Reels and Logic Wheels – Event Workflow",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
       {
@@ -89,7 +93,7 @@ export const allEvents = [
             content: "In this round, a background music (BGM) clip from a classic 90s or 2k Tamil movie will be played. Participants must identify the music director. Along with the BGM, a movie picture will be shown, prompting questions about the movie’s director, hero, heroine, or the movie title itself.",
           },
           {
-            subheading: "Round 3 - Final",
+            subheading: "Round 4 - Final",
             content: "In the thrilling final round, one teammate from each team acts out movie titles conveyed through Dumb Charades, while others guess within a time limit. Alongside this, teams tackle a 'Connection Game,' deciphering links between pictures or clues tied to a single movie or song. Adding to the excitement, teams can use creative sabotages to challenge opponents",
           },
         ],
@@ -121,22 +125,14 @@ export const allEvents = [
             content: "•	Each team will have two systems.\n• Member 1 kicks off with a quiz on the first system. The clock starts ticking here!\n•	Once the quiz is completed, Member 2 takes over on the second system for a debugging challenge.\n•	The faster and sharper your debugging, the higher your score climbs.\n•	Winning criteria: Number of debugging problems solved within the given time.",
           },
           {
-            subheading: "Round 2",
-            content: "In this round, participants will see photos of directors, heroes, and heroines from iconic 90s and 2k Tamil movies. Their task is to identify the movies associated with these images, testing both their visual memory and cinematic knowledge in a thrilling, competitive format.",
-          },
-          {
-            subheading: "Round 3",
-            content: "In this round, a background music (BGM) clip from a classic 90s or 2k Tamil movie will be played. Participants must identify the music director. Along with the BGM, a movie picture will be shown, prompting questions about the movie’s director, hero, heroine, or the movie title itself.",
-          },
-          {
-            subheading: "Round 3 - Final",
-            content: "In the thrilling final round, one teammate from each team acts out movie titles conveyed through Dumb Charades, while others guess within a time limit. Alongside this, teams tackle a 'Connection Game,' deciphering links between pictures or clues tied to a single movie or song. Adding to the excitement, teams can use creative sabotages to challenge opponents",
+            subheading: "Round 2 – Dashboard Showdown",
+            content: "•	Teams receive a dataset packed with hidden insights.\n•	Your task: Transform it into an interactive, insightful Power BI dashboard.\n•	Creativity, clarity, and data storytelling will determine your success.\n•	The most impactful dashboard—both visually and analytically—will crown the winners.",
           },
         ],
       },
       {
-        heading: "Bonus Fun",
-        content: "Expect surprising musical cues, cinematic twists, and a joyous celebration of 90s–2k movies and melodies throughout the event.",
+        heading: "What to Expect",
+        content: "From racing against the clock in the quiz-and-debug relay to building dashboards that speak louder than words, this event blends speed, logic, and creativity. If you can think fast, debug smart, and visualize data with flair, victory is yours!",
       },
     ],
   },

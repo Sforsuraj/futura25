@@ -5,9 +5,9 @@ export interface Event {
 }
 
 export const technicalEvents: Event[] = [
-  { id: "1", title: "Cinelytics", desc: "Data analytics" },
+  { id: "1", title: "DATA AVATHARAM", desc: "Data Analytics" },
   { id: "2", title: "power point padam", desc: "Ppt" },
-  { id: "3", title: "coder dhinam", desc: "Coding" },
+  { id: "3", title: "Coder Dhinam", desc: "Coding" },
   { id: "4", title: "Jolly oh Gymkhana", desc: "Game" },
 ];
 
