@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { technicalEvents, nonTechnicalEvents } from "../data/events";
 import CountdownTimer from "./CountdownTimer";
-import logo from '../assets/logo.png';
+import logo from "../assets/logo.png";
 
 // Dynamic imports for assets
 const galleryImages: string[] = Object.values(
-  import.meta.glob('../assets/gallery/*.{jpg,png}', { eager: true, import: 'default' })
+  import.meta.glob("../assets/gallery/*.{jpg,png,JPG}", { eager: true, import: "default" })
 );
 
 const sponsors: string[] = Object.values(
-  import.meta.glob('../assets/sponsors/*.{jpg,png}', { eager: true, import: 'default' })
+  import.meta.glob("../assets/sponsors/*.{jpg,png}", { eager: true, import: "default" })
 );
 
 const heroVideo: string = Object.values(
-  import.meta.glob('../assets/*.{mp4,webm}', { eager: true, import: 'default' })
+  import.meta.glob("../assets/*.{mp4,webm}", { eager: true, import: "default" })
 )[0] as string;
 
 const faqList = [
@@ -30,33 +30,49 @@ const faqList = [
   { question: "Need to bring Laptops ?", answer: "Yes, Participants who're participating in Technical events must bring their Laptops." },
 ];
 
-const scheduleList=[
-  {time:"09:00 AM",action:"Assembly"},
-  {time:"09:15 AM",action:"Inaugural Ceremony"},
-  {time:"10:00 AM",action:"Start of Technical Events"},
-  {time:"11:15 AM",action:"End of First Round for Coding Event"},
-  {time:"11:15 AM",action:"Snacks Break"},
-  {time:"11:30 AM",action:"Start of Non-Technical Events and Next Round of Coding Event"},
-  {time:"01:00 PM",action:"End of All Events"},
-  {time:"01:15 PM",action:"Lunch Break"},
-  {time:"02:30 PM",action:"Assembly for Valedictory"},
-  {time:"02:45 PM",action:"Valedictory Ceremony"},
-  {time:"04:00 PM",action:"Event Conclusion"},
-]
+const scheduleList = [
+  { time: "09:00 AM", action: "Assembly" },
+  { time: "09:15 AM", action: "Inaugural Ceremony" },
+  { time: "10:00 AM", action: "Start of Technical Events" },
+  { time: "11:15 AM", action: "End of First Round for Coding Event" },
+  { time: "11:15 AM", action: "Snacks Break" },
+  { time: "11:30 AM", action: "Start of Non-Technical Events and Next Round of Coding Event" },
+  { time: "01:00 PM", action: "End of All Events" },
+  { time: "01:15 PM", action: "Lunch Break" },
+  { time: "02:30 PM", action: "Assembly for Valedictory" },
+  { time: "02:45 PM", action: "Valedictory Ceremony" },
+  { time: "04:00 PM", action: "Event Conclusion" },
+];
 
 const Home: React.FC = () => {
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Gallery state
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Infinite auto-scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % galleryImages.length);
+    }, 3000); // every 3s
+    return () => clearInterval(interval);
+  }, []);
+
   const toggleFAQ = (index: number) => setActiveFAQ(activeFAQ === index ? null : index);
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  // Circular access helper
+  const getImage = (offset: number) => {
+    const index = (activeIndex + offset + galleryImages.length) % galleryImages.length;
+    return galleryImages[index];
+  };
 
   return (
     <div className="App">
       {/* Header */}
       <header className="header">
-        {/*<div className="logo"></div>*/}
-        <img src={logo} style={{width:120}}></img>
+        <img src={logo} style={{ width: 120 }} />
         <nav className={`navbar ${isMobileMenuOpen ? "active" : ""}`}>
           <a href="#hero" onClick={toggleMenu}>Home</a>
           <a href="#events" onClick={toggleMenu}>Events</a>
@@ -66,7 +82,6 @@ const Home: React.FC = () => {
           <a href="#faq" onClick={toggleMenu}>FAQ</a>
           <a href="#footer" onClick={toggleMenu}>Contact</a>
         </nav>
-
         <div className="hamburger" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -91,50 +106,59 @@ const Home: React.FC = () => {
           <div className="hero-about">
             <h2>About The Futura</h2>
             <p>
-              The Department of Artificial Intelligence and Data Science at Sri Sairam Institute of Technology hosts the National Techfest FUTURA'25. A Festival filled with fascination and excitement comes to provide an oppurtunity to showcase your creative ideas and talents.Get ready to witness the most thrilling challenges.
+              The Department of Artificial Intelligence and Data Science at Sri Sairam Institute of Technology hosts the National Techfest FUTURA'25. A Festival filled with fascination and excitement comes to provide an oppurtunity to showcase your creative ideas and talents. Get ready to witness the most thrilling challenges.
             </p>
           </div>
           <div className="hero-where">
             <h2>Where</h2>
-            <p>
-              Sri Sai Ram Institute of Technology, West Tambaram, Chennai-44 
-            </p>
+            <p>Sri Sai Ram Institute of Technology, West Tambaram, Chennai-44</p>
           </div>
           <div className="hero-when">
             <h2>When</h2>
             <p>
               Monday 22<sup>nd</sup> September 2025
             </p>
-          </div>   
+          </div>
         </div>
       </section>
 
       {/* Events */}
-      <section id="events" className="events-container">
-        <h2>Technical Events</h2>
-        <div className="cards">
-          {technicalEvents.map((event) => (
-            <Link key={event.id} to={`/event/${event.id}`}>
-              <div className="card">
-                <h3>{event.title}</h3>
-                <p>{event.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <section id="events" className="events-container">
+          <h2>Technical Events</h2>
+          <div className="cards">
+            {technicalEvents.map((event) => (
+              <Link key={event.id} to={`/event/${event.id}`}>
+                <div
+                  className="card"
+                  style={{ backgroundImage: `url(${event.image})` }}
+                >
+                  <div className="card-overlay">
+                    <h3>{event.title}</h3>
+                    <p>{event.desc}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-        <h2>Non-Technical Events</h2>
-        <div className="cards">
-          {nonTechnicalEvents.map((event) => (
-            <Link key={event.id} to={`/event/${event.id}`}>
-              <div className="card">
-                <h3>{event.title}</h3>
-                <p>{event.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+          <h2>Non-Technical Events</h2>
+          <div className="cards">
+            {nonTechnicalEvents.map((event) => (
+              <Link key={event.id} to={`/event/${event.id}`}>
+                <div
+                  className="card"
+                  style={{ backgroundImage: `url(${event.image})` }}
+                >
+                  <div className="card-overlay">
+                    <h3>{event.title}</h3>
+                    <p>{event.desc}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
 
       {/* Schedule */}
       <section id="schedule" className="event-time">
@@ -150,12 +174,39 @@ const Home: React.FC = () => {
       {/* Gallery */}
       <section id="gallery" className="gallery">
         <h2>Previous Year Highlights</h2>
-        <div className="gallery-grid">
-          {galleryImages.map((img, idx) => (
-            <img key={idx} src={img} alt={`Gallery ${idx + 1}`} />
+        <div className="gallery-center">
+          {/* Show 2 images left */}
+          <div className="gallery-item far-left">
+            <img src={getImage(-2)} alt="Far Left" />
+          </div>
+          <div className="gallery-item left">
+            <img src={getImage(-1)} alt="Left" />
+          </div>
+
+          {/* Active */}
+          <div className="gallery-item active">
+            <img src={getImage(0)} alt="Active" />
+          </div>
+
+          {/* Show 2 images right */}
+          <div className="gallery-item right">
+            <img src={getImage(1)} alt="Right" />
+          </div>
+          <div className="gallery-item far-right">
+            <img src={getImage(2)} alt="Far Right" />
+          </div>
+        </div>
+      {/* Indicator dots */}
+        <div className="gallery-dots">
+          {galleryImages.map((_, idx) => (
+            <span
+              key={idx}
+              className={`dot ${activeIndex === idx ? "active" : ""}`}
+            ></span>
           ))}
         </div>
       </section>
+      
 
       {/* Sponsors */}
       <section id="sponsors" className="sponsors">
@@ -186,7 +237,12 @@ const Home: React.FC = () => {
       <section id="contact" className="contact">
         <h2 className="contact-header">Contact Us</h2>
         <div className="contact-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2111.1575545924516!2d80.0532325!3d12.9606471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f51f638ddfbb%3A0xf3aef7ec7c8979ba!2sSri%20Sairam%20Institute%20of%20Technology!5e1!3m2!1sen!2sin!4v1757405042246!5m2!1sen!2sin" width="500" height="300" loading="lazy"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2111.1575545924516!2d80.0532325!3d12.9606471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f51f638ddfbb%3A0xf3aef7ec7c8979ba!2sSri%20Sairam%20Institute%20of%20Technology!5e1!3m2!1sen!2sin!4v1757405042246!5m2!1sen!2sin"
+            width="500"
+            height="300"
+            loading="lazy"
+          ></iframe>
           <div className="contact-detail">
             <p>Phone Number: +91 6381409603</p>
             <p>Email: futura@sairamit.edu.in</p>
