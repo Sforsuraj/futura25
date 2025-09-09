@@ -136,4 +136,32 @@ export const allEvents = [
       },
     ],
   },
+    {
+  id: "2",
+    title: "Script2Screen – Scripted Variants",
+    desc: "",
+    sections: [
+      {
+        heading: "Team Dynamics",
+        content: "Team up in a duo to bring your Script2Screen vision to innovation! Imagination meets execution as creativity and strategy combine. Only the most innovative minds will shine on this stage.",
+      },
+      {
+        heading: "Event Structure",
+        subsections: [
+          {
+            subheading: "Round – Screen of Innovation",
+            content: "• Unleash your creativity in just 2 hours as participants bring their ideas to life.\n• Each team will have 8 minutes to present:\n• 6 minutes to showcase their vision.\n• 2 minutes for an engaging Q&A session.\n• Get ready to inspire and be inspired as you compete with innovation-driven teams.\n• Fuel your imagination, sharpen your strategies, and let the Script2Screen begin!",
+          },
+          {
+            subheading: "Prerequisites",
+            content: "•	Participants will be provided with 5 exciting domains—explore them in advance to maximize your experience.\n•	Teams must bring their own laptops. Internet connectivity will be provided.",
+          },
+        ],
+      },
+      {
+        heading: "What to Expect",
+        content: "An electrifying platform where ideas evolve into impactful stories. From concept to screen, your innovation, storytelling, and execution skills will determine your success. If you can think differently and present boldly, this is your stage!",
+      },
+    ],
+  },
 ];
