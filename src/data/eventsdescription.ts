@@ -33,34 +33,70 @@ export const allEvents = [
   },
   // Add more events similarly...
   {
-  id: "5",
-    title: "Mystic Reels and Logic Wheels – Event Workflow",
-    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+  id: "4",
+    title: "Mystic Reels and Logic Wheels – Mystery is the Game, Logic is the Weapon",
+    desc: "A progressive challenge that tests your logic, debugging, and coding skills in three thrilling rounds.",
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Work in pairs and bring your combined skills...",
+        content: "A progressive challenge that tests your logic, debugging, and coding skills in three thrilling rounds.",
       },
       {
         heading: "Event Structure",
         subsections: [
           {
-            subheading: "Round 1 – Online Quiz",
-            content: "This round will be held on platforms like HackerRank...",
+            subheading: "Round 1 – Logic Breaker",
+            content: "• Find and fix bugs in 3–4 small programs.\n• Points for identifying; full credit for fixing.",
           },
           {
-            subheading: "Round 2 – Problem-Solving Challenge",
-            content: "Each team will choose one of three sets of problems...",
+            subheading: "Round 2 – Technical Mystery Quiz",
+            content: "• Fast-paced quiz on programming concepts, debugging, DS & algorithms.\n• Only top scorers unlock Round 3.",
           },
           {
-            subheading: "Round 3 – Problem-Solving Challenge",
-            content: "Each team will choose one of three sets of problems...",
+            subheading: "Round 3 – Mini Coding Challenge (Hackerrank)",
+            content: "• Solve coding problems with a hint-based scoring system.\n• Winners decided by score + speed.",
           },
         ],
       },
       {
         heading: "What to Expect",
-        content: "Coder Dhinam combines the excitement of a challenge...",
+        content: "A blend of mystery, logic, and coding where quick thinking and sharp debugging lead to victory.",
+      },
+    ],
+  },
+    {
+  id: "5",
+    title: "Pudhirodu Vilaiyadu – Reliving the 90s & 2Ks",
+    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+    sections: [
+      {
+        heading: "Team Dynamics",
+        content: "Pair up or team up, step into a time machine, and revisit the golden era of the 90s and early 2Ks! From Pepsi ads to Cartoon Network marathons, street games to school-time snacks—nostalgia is the theme, and presence of mind is your ticket forward.",
+      },
+      {
+        heading: "Event Structure",
+        subsections: [
+          {
+            subheading: "",
+            content: "A three-round throwback challenge blending puzzles, memory, and playful twists—all designed to spark the memories of growing up in the 90s and 2K.",
+          },
+          {
+            subheading: "Round 1 – Nostalgia Kickstart",
+            content: "• Teams begin with quick and quirky tasks to prove their spot.\n• Clear them and unlock a nostalgia-filled quiz.\n• Top scorers move on to the next round.",
+          },
+          {
+            subheading: "Round 2 – The Betting Showdown",
+            content: "• A one-on-one challenge where teams bet how many answers they can give on a given theme.\n• Opponent doubts you? They challenge.\n• Prove your bet right—you’re in. Miss it—you’re out.",
+          },
+          {
+            subheading: "Round 3 – Memory Mayhem",
+            content: "• A classic memory card game with a twist.\n• Cards flash briefly, then flip back. Match pairs under the ticking clock.\n• Miss a pair? Use a limited life by completing a sabotage.\n• The fastest and sharpest team takes the crown!",
+          },
+        ],
+      },
+      {
+        heading: "What to Expect",
+        content: "From witty quiz battles to fast-paced memory games, this event is a rollercoaster of fun, strategy, and childhood memories. If you can think fast and play smart, nostalgia will lead you to victory!",
       },
     ],
   },
@@ -136,7 +172,7 @@ export const allEvents = [
       },
     ],
   },
-    {
+  {
   id: "2",
     title: "Script2Screen – Scripted Variants",
     desc: "",
