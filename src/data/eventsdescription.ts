@@ -1,4 +1,64 @@
 export const allEvents = [
+    {
+  id: "1",
+    title: "DATA AVATHARAM",
+    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+    sections: [
+      {
+        heading: "Team Dynamics",
+        content: "Two brains, two systems, one mission—decode data like never before! Each team of two will split their skills across quiz mastery, debugging sharpness, and dashboard creativity. Teamwork, time management, and analytical thinking will be your strongest allies.",
+      },
+      {
+        heading: "Event Structure",
+        subsections: [
+          {
+            subheading: "",
+            content: "The competition unfolds in two thrilling rounds, each designed to test different facets of data analytics:",
+          },
+          {
+            subheading: "Round 1 – Tag Team Challenge",
+            content: "•	Each team will have two systems.\n• Member 1 kicks off with a quiz on the first system. The clock starts ticking here!\n•	Once the quiz is completed, Member 2 takes over on the second system for a debugging challenge.\n•	The faster and sharper your debugging, the higher your score climbs.\n•	Winning criteria: Number of debugging problems solved within the given time.",
+          },
+          {
+            subheading: "Round 2 – Dashboard Showdown",
+            content: "•	Teams receive a dataset packed with hidden insights.\n•	Your task: Transform it into an interactive, insightful Power BI dashboard.\n•	Creativity, clarity, and data storytelling will determine your success.\n•	The most impactful dashboard—both visually and analytically—will crown the winners.",
+          },
+        ],
+      },
+      {
+        heading: "What to Expect",
+        content: "From racing against the clock in the quiz-and-debug relay to building dashboards that speak louder than words, this event blends speed, logic, and creativity. If you can think fast, debug smart, and visualize data with flair, victory is yours!",
+      },
+    ],
+  },
+  {
+  id: "2",
+    title: "Script2Screen – Scripted Variants",
+    desc: "",
+    sections: [
+      {
+        heading: "Team Dynamics",
+        content: "Team up in a duo to bring your Script2Screen vision to innovation! Imagination meets execution as creativity and strategy combine. Only the most innovative minds will shine on this stage.",
+      },
+      {
+        heading: "Event Structure",
+        subsections: [
+          {
+            subheading: "Round – Screen of Innovation",
+            content: "• Unleash your creativity in just 2 hours as participants bring their ideas to life.\n• Each team will have 8 minutes to present:\n• 6 minutes to showcase their vision.\n• 2 minutes for an engaging Q&A session.\n• Get ready to inspire and be inspired as you compete with innovation-driven teams.\n• Fuel your imagination, sharpen your strategies, and let the Script2Screen begin!",
+          },
+          {
+            subheading: "Prerequisites",
+            content: "•	Participants will be provided with 5 exciting domains—explore them in advance to maximize your experience.\n•	Teams must bring their own laptops. Internet connectivity will be provided.",
+          },
+        ],
+      },
+      {
+        heading: "What to Expect",
+        content: "An electrifying platform where ideas evolve into impactful stories. From concept to screen, your innovation, storytelling, and execution skills will determine your success. If you can think differently and present boldly, this is your stage!",
+      },
+    ],
+  },
   {
     id: "3",
     title: "CODER DHINAM: A Day of Logic, Teamwork, and Clean Code",
@@ -137,66 +197,6 @@ export const allEvents = [
       {
         heading: "Bonus Fun",
         content: "Expect surprising musical cues, cinematic twists, and a joyous celebration of 90s–2k movies and melodies throughout the event.",
-      },
-    ],
-  },
-  {
-  id: "1",
-    title: "DATA AVATHARAM",
-    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
-    sections: [
-      {
-        heading: "Team Dynamics",
-        content: "Two brains, two systems, one mission—decode data like never before! Each team of two will split their skills across quiz mastery, debugging sharpness, and dashboard creativity. Teamwork, time management, and analytical thinking will be your strongest allies.",
-      },
-      {
-        heading: "Event Structure",
-        subsections: [
-          {
-            subheading: "",
-            content: "The competition unfolds in two thrilling rounds, each designed to test different facets of data analytics:",
-          },
-          {
-            subheading: "Round 1 – Tag Team Challenge",
-            content: "•	Each team will have two systems.\n• Member 1 kicks off with a quiz on the first system. The clock starts ticking here!\n•	Once the quiz is completed, Member 2 takes over on the second system for a debugging challenge.\n•	The faster and sharper your debugging, the higher your score climbs.\n•	Winning criteria: Number of debugging problems solved within the given time.",
-          },
-          {
-            subheading: "Round 2 – Dashboard Showdown",
-            content: "•	Teams receive a dataset packed with hidden insights.\n•	Your task: Transform it into an interactive, insightful Power BI dashboard.\n•	Creativity, clarity, and data storytelling will determine your success.\n•	The most impactful dashboard—both visually and analytically—will crown the winners.",
-          },
-        ],
-      },
-      {
-        heading: "What to Expect",
-        content: "From racing against the clock in the quiz-and-debug relay to building dashboards that speak louder than words, this event blends speed, logic, and creativity. If you can think fast, debug smart, and visualize data with flair, victory is yours!",
-      },
-    ],
-  },
-  {
-  id: "2",
-    title: "Script2Screen – Scripted Variants",
-    desc: "",
-    sections: [
-      {
-        heading: "Team Dynamics",
-        content: "Team up in a duo to bring your Script2Screen vision to innovation! Imagination meets execution as creativity and strategy combine. Only the most innovative minds will shine on this stage.",
-      },
-      {
-        heading: "Event Structure",
-        subsections: [
-          {
-            subheading: "Round – Screen of Innovation",
-            content: "• Unleash your creativity in just 2 hours as participants bring their ideas to life.\n• Each team will have 8 minutes to present:\n• 6 minutes to showcase their vision.\n• 2 minutes for an engaging Q&A session.\n• Get ready to inspire and be inspired as you compete with innovation-driven teams.\n• Fuel your imagination, sharpen your strategies, and let the Script2Screen begin!",
-          },
-          {
-            subheading: "Prerequisites",
-            content: "•	Participants will be provided with 5 exciting domains—explore them in advance to maximize your experience.\n•	Teams must bring their own laptops. Internet connectivity will be provided.",
-          },
-        ],
-      },
-      {
-        heading: "What to Expect",
-        content: "An electrifying platform where ideas evolve into impactful stories. From concept to screen, your innovation, storytelling, and execution skills will determine your success. If you can think differently and present boldly, this is your stage!",
       },
     ],
   },
