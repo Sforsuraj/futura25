@@ -6,8 +6,8 @@ export interface Event {
 }
 
 export const technicalEvents: Event[] = [
-  { id: "1", title: "CINELYTICS", desc: "Data Analytics", image: "src/assets/events/1.jpg" },
-  { id: "2", title: "SCRIPT2SCREEN", desc: "Power Point Presentation", image: "src/assets/events/2.jpg" },
+  { id: "1", title: "CINELYTICS", desc: "Data Analytics", image: "/src/assets/events/1.jpg" },
+  { id: "2", title: "SCRIPT2SCREEN", desc: "Power Point Presentation", image: "/src/assets/events/2.jpg" },
   { id: "3", title: "CODE MASTER", desc: "Coding", image: "src/assets/events/3.jpg" },
   { id: "4", title: "MYSTIC REELS AND LOGIC WHEELS", desc: "Decryption", image: "src/assets/events/4.jpg" },
 ];
