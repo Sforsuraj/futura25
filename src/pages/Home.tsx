@@ -10,6 +10,7 @@ const galleryImages: string[] = Object.values(
   import.meta.glob("../assets/gallery/*.{jpg,png,JPG}", { eager: true, import: "default" })
 );
 
+
 const sponsors: string[] = Object.values(
   import.meta.glob("../assets/sponsors/*.{jpg,png}", { eager: true, import: "default" })
 );
