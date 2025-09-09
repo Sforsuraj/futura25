@@ -71,6 +71,9 @@ const Home: React.FC = () => {
 
   return (
     <div className="App">
+      <video className="background-video" autoPlay loop muted>
+        <source src={heroVideo} type="video/mp4" />
+      </video>
       {/* Header */}
       <header className="header">
         <img src={logo} style={{ width: 120 }} />
@@ -92,9 +95,6 @@ const Home: React.FC = () => {
 
       {/* Hero Section */}
       <section id="hero" className="hero-container">
-        <video className="hero-video" autoPlay loop muted>
-          <source src={heroVideo} type="video/mp4" />
-        </video>
         <div className="hero-content">
           <h1>FUTURA'2025</h1>
           <p>Explore, Innovate, and Celebrate Knowledge</p>
@@ -103,18 +103,21 @@ const Home: React.FC = () => {
             <button>Register Now</button>
           </a>
         </div>
-        <div className="hero-overlay">
-          <div className="hero-about">
+      </section>
+
+      <section className="About">
+        <div className="about-overlay">
+          <div className="about-about">
             <h2>About The Futura</h2>
             <p>
               The Department of Artificial Intelligence and Data Science at Sri Sairam Institute of Technology hosts the National Techfest FUTURA'25. A Festival filled with fascination and excitement comes to provide an oppurtunity to showcase your creative ideas and talents. Get ready to witness the most thrilling challenges.
             </p>
           </div>
-          <div className="hero-where">
+          <div className="about-where">
             <h2>Where</h2>
             <p>Sri Sai Ram Institute of Technology, West Tambaram, Chennai-44</p>
           </div>
-          <div className="hero-when">
+          <div className="about-when">
             <h2>When</h2>
             <p>
               Monday 22<sup>nd</sup> September 2025
