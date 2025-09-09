@@ -94,7 +94,7 @@ body {
 
 .hero-content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -134,6 +134,36 @@ body {
   color: #000;
 }
 
+.hero-overlay {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hero-about {
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  width: 40%;
+}
+.hero-when {
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  width: 30%;
+}
+.hero-where {
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  width: 30%;
+}
+
 /* ---------------------- Countdown ---------------------- */
 .countdown-container {
   display: flex;
@@ -146,7 +176,7 @@ body {
 }
 
 .countdown-title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 30px;
   letter-spacing: 2px;
   color: #FFD700;
@@ -168,7 +198,7 @@ body {
 }
 
 .number {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   display: block;
   color: #FFD700;
@@ -206,12 +236,17 @@ body {
 .card {
   background: linear-gradient(145deg, #1c1c1c, #292929);
   padding: 2rem;
-  border-radius: 12px;
   width: 250px;
+  min-height: 200px;
+  border-radius: 12px;
   box-shadow: 0 8px 20px rgba(255,215,0,0.2);
   border: 2px solid #FFD700;
   transition: transform 0.4s, box-shadow 0.4s;
   color: white;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 .card:hover {
@@ -357,7 +392,24 @@ body {
   padding-left: 1rem;
   color: #ccc;
 }
-
+/* ---------------------- Contact us ---------------------- */
+.contact-header{
+  text-align: center;
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 2rem;
+  background: #111;
+  justify-content: center;
+  align-items: center;
+}
+.contact-detail {
+  margin-left: 10%;
+}
 /* ---------------------- Footer ---------------------- */
 .footer {
   background: #000;

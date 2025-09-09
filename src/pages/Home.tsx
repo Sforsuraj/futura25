@@ -87,6 +87,26 @@ const Home: React.FC = () => {
             <button>Register Now</button>
           </a>
         </div>
+        <div className="hero-overlay">
+          <div className="hero-about">
+            <h2>About The Futura</h2>
+            <p>
+              The Department of Artificial Intelligence and Data Science at Sri Sairam Institute of Technology hosts the National Techfest FUTURA'25. A Festival filled with fascination and excitement comes to provide an oppurtunity to showcase your creative ideas and talents.Get ready to witness the most thrilling challenges.
+            </p>
+          </div>
+          <div className="hero-where">
+            <h2>Where</h2>
+            <p>
+              Sri Sai Ram Institute of Technology, West Tambaram, Chennai-44 
+            </p>
+          </div>
+          <div className="hero-when">
+            <h2>When</h2>
+            <p>
+              Monday 22<sup>nd</sup> September 2025
+            </p>
+          </div>   
+        </div>
       </section>
 
       {/* Events */}
@@ -162,9 +182,23 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Contact */}
+      <section id="contact" className="contact">
+        <h2 className="contact-header">Contact Us</h2>
+        <div className="contact-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2111.1575545924516!2d80.0532325!3d12.9606471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f51f638ddfbb%3A0xf3aef7ec7c8979ba!2sSri%20Sairam%20Institute%20of%20Technology!5e1!3m2!1sen!2sin!4v1757405042246!5m2!1sen!2sin" width="500" height="300" loading="lazy"></iframe>
+          <div className="contact-detail">
+            <p>Phone Number: +91 6381409603</p>
+            <p>Email: futura@sairamit.edu.in</p>
+            <p>Address: Sri Sairam Institute of Technology, Tambaram, Chennai</p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <section id="footer" className="footer">
-        <p>&copy; 2025 College Symposium. All Rights Reserved.</p>
+        <p>&copy; Copyright Futura`25. All Rights Reserved.</p>
+        <p>Designed by AI & DS Department</p>
       </section>
     </div>
   );

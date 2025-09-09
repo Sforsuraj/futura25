@@ -1,7 +1,7 @@
 export const allEvents = [
     {
   id: "1",
-    title: "DATA AVATHARAM",
+    title: "Cinelytics",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
       {
@@ -61,7 +61,7 @@ export const allEvents = [
   },
   {
     id: "3",
-    title: "CODER DHINAM: A Day of Logic, Teamwork, and Clean Code",
+    title: "Code Master: A Day of Logic, Teamwork, and Clean Code",
     desc: "",
     sections: [
       {
