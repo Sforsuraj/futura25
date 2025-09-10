@@ -138,14 +138,16 @@ const Register: React.FC = () => {
           </div>
         ))}
 
-        <button
-          type="button"
-          className="add-member"
-          onClick={addMember}
-          disabled={members.length >= MAX_MEMBERS}
-        >
-          + Add Member
-        </button>
+        {members.length < MAX_MEMBERS && (
+          <button
+            type="button"
+            className="add-member"
+            onClick={addMember}
+          >
+            + Add Member
+          </button>
+        )}
+
 
         <button type="submit" disabled={loading}>
           {loading ? "Registering..." : "Submit Registration"}
