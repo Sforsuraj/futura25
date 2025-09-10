@@ -168,13 +168,20 @@ const Home: React.FC = () => {
       {/* Schedule */}
       <section id="schedule" className="event-time">
         <h2>Event Schedule</h2>
-        {scheduleList.map((item, idx) => (
-          <div key={idx} className="time-item">
-            <span className="time">{item.time}</span>
-            <span className="action">{item.action}</span>
-          </div>
-        ))}
+
+        <div className="schedule-list">
+          {scheduleList.map((item, idx) => (
+            <div key={idx} className="time-item">
+              <div className="dot"></div>
+              <div className="content">
+                <span className="time">{item.time}</span>
+                <span className="action">{item.action}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
+
 
       {/* Gallery */}
       <section id="gallery" className="gallery">

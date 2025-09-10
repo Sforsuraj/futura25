@@ -1,6 +1,14 @@
+import image1 from "../assets/event_detail/event1.jpg";
+import image2 from "../assets/event_detail/event2.jpg";
+import image3 from "../assets/event_detail/event3.jpg";
+import image4 from "../assets/event_detail/event1.jpg";
+import image5 from "../assets/event_detail/event2.jpg";
+import image6 from "../assets/event_detail/event3.jpg";
+
 export const allEvents = [
     {
   id: "1",
+    image: image1,
     title: "Cinelytics",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
@@ -33,6 +41,7 @@ export const allEvents = [
   },
   {
   id: "2",
+    image:image2,
     title: "Script2Screen – Scripted Variants",
     desc: "",
     sections: [
@@ -61,6 +70,7 @@ export const allEvents = [
   },
   {
     id: "3",
+    image:image3,
     title: "Code Master: A Day of Logic, Teamwork, and Clean Code",
     desc: "",
     sections: [
@@ -94,6 +104,7 @@ export const allEvents = [
   // Add more events similarly...
   {
   id: "4",
+    image:image4,
     title: "Mystic Reels and Logic Wheels – Mystery is the Game, Logic is the Weapon",
     desc: "A progressive challenge that tests your logic, debugging, and coding skills in three thrilling rounds.",
     sections: [
@@ -126,6 +137,7 @@ export const allEvents = [
   },
     {
   id: "5",
+    image:image5,
     title: "Pudhirodu Vilaiyadu – Reliving the 90s & 2Ks",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
@@ -162,6 +174,7 @@ export const allEvents = [
   },
   {
   id: "6",
+    image:image6,
     title: "CINE CITIZENS: A DEEP DIVE INTO KOLLYWOOD.",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
