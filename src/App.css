@@ -89,14 +89,16 @@ body {
 }
 
 /* ---------------------- Hero Section ---------------------- */
+/* ---------------------- Hero Section ---------------------- */
 .hero-container {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem; /* small padding instead of % */
 }
 
 .hero-content {
@@ -105,27 +107,30 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 0 1rem;
   z-index: 2;
+  padding: 0; /* removed the 20% padding */
+  max-width: 90%; /* ensures text doesn’t overflow */
+  word-wrap: break-word;
 }
 
 .hero-content h1 {
-  font-size: 6rem;
+  font-size: clamp(1.5rem, 8vw, 5rem); /* auto scales with screen */
   font-weight: 800;
   color: #ff0000;
   text-shadow: 0 0 25px rgba(220, 10, 10, 0.9);
+  line-height: 1.2;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
+  margin-bottom: 0.5rem;
   color: #ff4d4f;
   font-weight: 500;
 }
 
 .hero-content button {
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
   background: linear-gradient(90deg, #ff4d4f, #e50914);
   border: none;
   color: #fff;
@@ -141,6 +146,18 @@ body {
   color: #000;
   box-shadow: 0 6px 20px rgba(255,215,0,0.6);
 }
+
+/* ---------------------- Responsive Adjustments ---------------------- */
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 { line-height: 1.1; }
+}
+
 
 /* ---------------------- About Section ---------------------- */
 .about-overlay {
@@ -167,7 +184,9 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 3rem 0;
+  padding-bottom:20px;
+  
+
 }
 
 .countdown-title {
@@ -181,8 +200,8 @@ body {
 .timer {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row;
 }
 
 .time-segment {
