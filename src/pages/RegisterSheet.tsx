@@ -118,7 +118,7 @@ const RegisterSheet = () => {
                   <th style={thStyle}>Event ID</th>
                   <th style={thStyle}>Event Name</th>
                   <th style={thStyle}>Team Name</th>
-                  {[1, 2, 3, 4].map((num) => (
+                  {[1, 2].map((num) => (
                     <React.Fragment key={num}>
                       <th style={thStyle}>Member {num} Name</th>
                       <th style={thStyle}>Member {num} Email</th>
@@ -142,7 +142,7 @@ const RegisterSheet = () => {
                     <td style={tdStyle}>{team.eventId}</td>
                     <td style={tdStyle}>{team.eventName}</td>
                     <td style={tdStyle}>{team.teamName}</td>
-                    {[0, 1, 2, 3].map((i) => {
+                    {[0, 1,].map((i) => {
                       const member = team.members[i];
                       return (
                         <React.Fragment key={i}>
@@ -167,26 +167,27 @@ const RegisterSheet = () => {
   );
 };
 
-// Styles
+// Styles (Dark Mode)
 const containerStyle: React.CSSProperties = {
   padding: "2rem",
   fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-  backgroundColor: "#f5f7fa",
+  backgroundColor: "#121212", // dark background
   minHeight: "100vh",
+  color: "#e0e0e0", // light text
 };
 
 const headerStyle: React.CSSProperties = {
   textAlign: "center",
   marginBottom: "2rem",
-  color: "#333",
+  color: "#f5f5f5",
   fontWeight: "700",
   fontSize: "2.2rem",
 };
 
 const cardStyle: React.CSSProperties = {
-  backgroundColor: "#fff",
+  backgroundColor: "#1e1e1e", // card dark gray
   borderRadius: 10,
-  boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
   padding: "1rem 1.5rem 2rem 1.5rem",
   marginBottom: "2rem",
   display: "flex",
@@ -203,9 +204,9 @@ const cardHeaderStyle: React.CSSProperties = {
 };
 
 const buttonStyle: React.CSSProperties = {
-  backgroundColor: "#7f7f7fff",
+  backgroundColor: "#3a3a3a", // dark gray button
   border: "none",
-  color: "white",
+  color: "#ffffff",
   padding: "0.5rem 1.25rem",
   borderRadius: 5,
   cursor: "pointer",
@@ -219,7 +220,7 @@ const tableWrapperStyle: React.CSSProperties = {
   maxHeight: 400,
   overflowY: "auto",
   borderRadius: 6,
-  border: "1px solid #ddd",
+  border: "1px solid #333", // darker border
 };
 
 const tableStyle: React.CSSProperties = {
@@ -227,15 +228,16 @@ const tableStyle: React.CSSProperties = {
   borderCollapse: "collapse",
   minWidth: 900,
   fontSize: "0.9rem",
+  color: "#ddd",
 };
 
 const thStyle: React.CSSProperties = {
   position: "sticky",
   top: 0,
-  backgroundColor: "#686d72ff",
-  color: "white",
+  backgroundColor: "#2c2c2c", // dark header
+  color: "#f5f5f5",
   padding: "10px 12px",
-  borderBottom: "2px solid #797b7dff",
+  borderBottom: "2px solid #444",
   textAlign: "left",
   whiteSpace: "nowrap",
   zIndex: 10,
@@ -243,7 +245,7 @@ const thStyle: React.CSSProperties = {
 
 const tdStyle: React.CSSProperties = {
   padding: "10px 12px",
-  borderBottom: "1px solid #ddd",
+  borderBottom: "1px solid #333",
   whiteSpace: "nowrap",
 };
 
@@ -255,8 +257,9 @@ const trStyle: React.CSSProperties = {
 const noDataStyle: React.CSSProperties = {
   padding: "1rem",
   textAlign: "center",
-  color: "#999",
+  color: "#777",
   fontStyle: "italic",
 };
+
 
 export default RegisterSheet;
