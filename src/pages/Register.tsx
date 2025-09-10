@@ -11,7 +11,7 @@ interface Member {
   college: string;
 }
 
-const MAX_MEMBERS = 4;
+const MAX_MEMBERS = 2;
 
 const Register: React.FC = () => {
   const { id } = useParams();
@@ -138,14 +138,16 @@ const Register: React.FC = () => {
           </div>
         ))}
 
-        <button
-          type="button"
-          className="add-member"
-          onClick={addMember}
-          disabled={members.length >= MAX_MEMBERS}
-        >
-          + Add Member
-        </button>
+        {members.length < MAX_MEMBERS && (
+          <button
+            type="button"
+            className="add-member"
+            onClick={addMember}
+          >
+            + Add Member
+          </button>
+        )}
+
 
         <button type="submit" disabled={loading}>
           {loading ? "Registering..." : "Submit Registration"}
