@@ -11,6 +11,8 @@ interface Member {
   college: string;
 }
 
+const MAX_MEMBERS = 4;
+
 const Register: React.FC = () => {
   const { id } = useParams();
   const event = allEvents.find((e) => e.id === id);
@@ -32,6 +34,7 @@ const Register: React.FC = () => {
   };
 
   const addMember = () => {
+    if (members.length >= MAX_MEMBERS) return; // prevent adding more than 4
     setMembers([...members, { name: "", email: "", dept: "", college: "" }]);
   };
 
@@ -46,13 +49,11 @@ const Register: React.FC = () => {
     setLoading(true);
 
     try {
-      // Firebase-safe key for team name
       const safeTeamName = teamName.replace(/[.$#[\]/]/g, "_");
       const eventNode = `registrations/event_${id}`;
 
       const eventRef = ref(database, `${eventNode}/${safeTeamName}`);
 
-      // Check if team name already exists
       const snapshot = await get(eventRef);
       if (snapshot.exists()) {
         alert("Team name already exists! Please choose a different name.");
@@ -60,7 +61,6 @@ const Register: React.FC = () => {
         return;
       }
 
-      // Save registration
       await set(eventRef, {
         eventName: event?.title || "Symposium 2025",
         members,
@@ -138,7 +138,12 @@ const Register: React.FC = () => {
           </div>
         ))}
 
-        <button type="button" className="add-member" onClick={addMember}>
+        <button
+          type="button"
+          className="add-member"
+          onClick={addMember}
+          disabled={members.length >= MAX_MEMBERS}
+        >
           + Add Member
         </button>
 

@@ -501,6 +501,7 @@ body {
 .register-form button {
   width: 100%;
   padding: 12px;
+  margin-bottom: 10px;
   font-size: 1rem;
   background: linear-gradient(90deg, #ff4d4f, #FFD700);
   border: none;
