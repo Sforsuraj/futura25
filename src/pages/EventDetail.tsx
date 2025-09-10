@@ -69,19 +69,42 @@ const EventDetail: React.FC = () => {
             </div>
           ))}
 
-        <Link to={`/register/${event.id}`}>
-          <button
-            style={{
-              padding: "10px 20px",
-              fontSize: "1rem",
-              borderRadius: "8px",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Register Now
-          </button>
-        </Link>
+        <div
+          className="hello"
+          style={{
+            display: "flex",
+            gap: "10rem",
+            justifyContent: "space-between", 
+            flex: "1",
+          }}
+        >
+          <Link to={`/#events${event.id}`}>
+            <button
+              style={{
+                padding: "10px 20px",
+                fontSize: "1rem",
+                borderRadius: "8px",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Back
+            </button>
+          </Link>
+          <Link to={`/register/${event.id}`}>
+            <button
+              style={{
+                padding: "10px 20px",
+                fontSize: "1rem",
+                borderRadius: "8px",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Register Now
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
