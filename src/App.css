@@ -124,7 +124,7 @@ body {
 .hero-content p {
   font-size: clamp(0.9rem, 3vw, 1.5rem);
   margin-bottom: 0.5rem;
-  color: #ff4d4f;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -362,7 +362,8 @@ body {
   padding: 3rem 1rem;
   text-align: center;
   color: #fff;
-  background: #111;
+  background: rgba(26, 26, 26, 0.6); /* translucent background */
+  backdrop-filter: blur(8px); 
   overflow-x: auto;
 }
 
@@ -438,7 +439,8 @@ body {
 .sponsors {
   padding: 4rem 2rem;
   text-align: center;
-  background: #111;
+  background: rgba(26, 26, 26, 0.6); /* translucent background */
+  backdrop-filter: blur(8px); 
 }
 
 .sponsors h2 {
@@ -487,19 +489,24 @@ body {
 }
 
 .faq-item {
-  background: #1a1a1a;
+  background: rgba(26, 26, 26, 0.6); /* translucent background */
+  backdrop-filter: blur(8px); /* glass effect */
   border-radius: 10px;
   margin-bottom: 1rem;
   cursor: pointer;
   padding: 1rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(255,215,0,0.1);
+  
+  /* elevation + downward shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transform: translateZ(0);
   transition: all 0.3s ease;
-  border: 1px solid #FFD700;
 }
 
 .faq-item:hover {
-  box-shadow: 0 6px 18px rgba(255,215,0,0.25);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65); /* stronger shadow on hover */
+  transform: translateY(-4px); /* slight lift */
 }
+
 
 .faq-question {
   font-weight: bold;
@@ -516,15 +523,19 @@ body {
 .contact-header {
   text-align: center;
   color: #FFD700;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  padding-top: 2%;
+}
+.contact{
+  background: rgba(26, 26, 26, 0.6); /* translucent background */
+  backdrop-filter: blur(8px);
 }
 
 .contact-container {
   display: flex;
   flex-direction: row;
   padding: 4rem 2rem;
-  background: #111;
   justify-content: center;
   align-items: center;
 }
@@ -535,7 +546,8 @@ body {
 
 /* ---------------------- Footer ---------------------- */
 .footer {
-  background: #000;
+  background: rgba(26, 26, 26, 0.8); /* translucent background */
+  backdrop-filter: blur(8px); 
   color: #FFD700;
   text-align: center;
   padding: 2rem;
