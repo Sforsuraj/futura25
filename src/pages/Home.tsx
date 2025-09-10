@@ -138,8 +138,7 @@ const Home: React.FC = () => {
                   style={{ backgroundImage: `url(${event.image})` }}
                 >
                   <div className="card-overlay">
-                    <h3>{event.title}</h3>
-                    <p>{event.desc}</p>
+
                   </div>
                 </div>
               </Link>
@@ -155,8 +154,6 @@ const Home: React.FC = () => {
                   style={{ backgroundImage: `url(${event.image})` }}
                 >
                   <div className="card-overlay">
-                    <h3>{event.title}</h3>
-                    <p>{event.desc}</p>
                   </div>
                 </div>
               </Link>
