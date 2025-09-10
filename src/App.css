@@ -563,15 +563,21 @@ body {
 }
 
 /* ---------------------- Event Detail & Registration ---------------------- */
-.event-detail, .register-container {
+.event-detail {
+  max-width: 600px;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+}
+ .register-container {
   max-width: 600px;
   margin: 100px auto 50px;
   background-color: #1a1a1a;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(255,215,0,0.2);
- 
-}
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+ }
 
 .event-detail h2, .register-container h2 {
   margin-bottom: 20px;
