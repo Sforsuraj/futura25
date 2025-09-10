@@ -41,15 +41,15 @@ const CountdownTimer = () => {
         </div>
         <div className="time-segment">
           <span className="number">{hours}</span>
-          <span className="label">Hours</span>
+          <span className="label">Hrs</span>
         </div>
         <div className="time-segment">
           <span className="number">{minutes}</span>
-          <span className="label">Minutes</span>
+          <span className="label">Mins</span>
         </div>
         <div className="time-segment">
           <span className="number">{seconds}</span>
-          <span className="label">Seconds</span>
+          <span className="label">Sec</span>
         </div>
       </div>
     </div>
