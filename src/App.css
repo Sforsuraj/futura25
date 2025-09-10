@@ -27,6 +27,9 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(0.3);
+  backdrop-filter: blur(8px);
+  -webkit-filter: brightness(0.3);
 }
 
 /* ---------------------- Header ---------------------- */
