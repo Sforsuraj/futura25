@@ -4,6 +4,7 @@ import "../App.css";
 import { technicalEvents, nonTechnicalEvents } from "../data/events";
 import CountdownTimer from "./CountdownTimer";
 import logo from "../assets/logo.png";
+import title from  "../assets/title.png";
 
 // Dynamic imports for assets
 const galleryImages: string[] = Object.values(
@@ -97,7 +98,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section id="hero" className="hero-container">
         <div className="hero-content">
-          <h1>FUTURA'2025</h1>
+          <img src={title} style={{ width: "100%"}} />
           <p>Explore, Innovate, and Celebrate Knowledge</p>
           <CountdownTimer />
           <a href="#events">
