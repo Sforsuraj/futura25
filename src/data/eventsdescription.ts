@@ -1,7 +1,7 @@
 import image1 from "../assets/event_detail/event1.jpg";
 import image2 from "../assets/event_detail/event2.jpg";
 import image3 from "../assets/event_detail/event3.jpg";
-import image4 from "../assets/event_detail/event1.jpg";
+import image4 from "../assets/event_detail/event4.jpg";
 import image5 from "../assets/event_detail/event2.jpg";
 import image6 from "../assets/event_detail/event3.jpg";
 
