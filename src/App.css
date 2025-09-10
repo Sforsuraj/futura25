@@ -292,7 +292,7 @@ body {
   margin: 3rem auto;
   padding: 2rem;
   background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
+  border-radius: 12px;  
   color: white;
 }
 
@@ -628,7 +628,8 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px); 
     display: none;
   }
   .navbar.active { display: flex; }
