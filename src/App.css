@@ -628,10 +628,14 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    padding: 10%;
     display: none;
+    font-size: 1.2rem;;
+
   }
-  .navbar.active { display: flex; }
+  .navbar.active { display: flex;}
   .hero-content h1 { font-size: 2.5rem; }
   .hero-content p { font-size: 1rem; }
   .cards { flex-direction: column; }
