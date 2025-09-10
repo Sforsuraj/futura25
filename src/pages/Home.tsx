@@ -115,7 +115,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="about-where">
-            <h2>Where</h2>
+            <h2>Destination</h2>
             <p>Sri Sai Ram Institute of Technology, West Tambaram, Chennai-44</p>
           </div>
           <div className="about-when">
