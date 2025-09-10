@@ -190,19 +190,15 @@ export const allEvents = [
             content: "A four-round throwback challenge. Each round blends puzzles, memory, and playful twists, all designed to spark the memories of growing up in the 90s and 2k.",
           },
           {
-            subheading: "Round 1 – Online",
-            content: "Round 1 is an online Tamil movie musical quiz with MCQs on 90s-2k films, actors, and iconic dialogues. Top scorers advance, celebrating nostalgia through interactive digital fun.",
+            subheading: "Round 1",
+            content: "Relive 90s–2000s Tamil cinema! From musical MCQs and iconic dialogues to identifying films from star and director photos, test your nostalgia, memory, and movie love in this thrilling quiz!",
           },
           {
             subheading: "Round 2",
-            content: "In this round, participants will see photos of directors, heroes, and heroines from iconic 90s and 2k Tamil movies. Their task is to identify the movies associated with these images, testing both their visual memory and cinematic knowledge in a thrilling, competitive format.",
-          },
-          {
-            subheading: "Round 3",
             content: "In this round, a background music (BGM) clip from a classic 90s or 2k Tamil movie will be played. Participants must identify the music director. Along with the BGM, a movie picture will be shown, prompting questions about the movie’s director, hero, heroine, or the movie title itself.",
           },
           {
-            subheading: "Round 4 - Final",
+            subheading: "Round 3 - Final",
             content: "In the thrilling final round, one teammate from each team acts out movie titles conveyed through Dumb Charades, while others guess within a time limit. Alongside this, teams tackle a 'Connection Game,' deciphering links between pictures or clues tied to a single movie or song. Adding to the excitement, teams can use creative sabotages to challenge opponents",
           },
         ],
