@@ -11,7 +11,7 @@ interface Member {
   college: string;
 }
 
-const MAX_MEMBERS = 4;
+const MAX_MEMBERS = 2;
 
 const Register: React.FC = () => {
   const { id } = useParams();

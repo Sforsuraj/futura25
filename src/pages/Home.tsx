@@ -253,7 +253,8 @@ const Home: React.FC = () => {
             loading="lazy"
           ></iframe>
           <div className="contact-detail">
-            <p>Phone Number: +91 6381409603</p>
+            <p>Staff Coordinator: Mr Jeya Ganeshan </p>
+            <p>Contact Number: +91 </p>
             <p>Email: futura@sairamit.edu.in</p>
             <p>Address: Sri Sairam Institute of Technology, Tambaram, Chennai</p>
           </div>
