@@ -179,7 +179,7 @@ export const allEvents = [
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Form teams and dive into a nostalgic journey through Tamil cinema of the 90s and 2k. Collaboration and quick thinking are key as teammates rely on each other’s strengths—from recalling iconic dialogues and recognizing legendary stars to identifying BGMs and acting out movie titles.",
+        content: "Form a team of two and dive into a nostalgic journey through Tamil cinema of the 90s and 2k. Collaboration and quick thinking are key as teammates rely on each other’s strengths—from recalling iconic dialogues and recognizing legendary stars to identifying BGMs and acting out movie titles.",
       },
       {
         heading: "Event Structure",
