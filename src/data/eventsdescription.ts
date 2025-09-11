@@ -9,11 +9,11 @@ export const allEvents = [
   id: "1",
     image: image6,
     title: "Cinelytics",
-    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+    desc: "Two brains, two systems, one mission—decode data like never before!",
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Two brains, two systems, one mission—decode data like never before! Each team of two will split their skills across quiz mastery, debugging sharpness, and dashboard creativity. Teamwork, time management, and analytical thinking will be your strongest allies.",
+        content: "A competitive event focusing on problem-solving, code efficiency, and teamwork. Each team of two will split their skills across quiz mastery, debugging sharpness, and dashboard creativity.",
       },
       {
         heading: "Event Structure",
@@ -42,11 +42,11 @@ export const allEvents = [
   id: "2",
     image:image1,
     title: "Script2Screen – Scripted Variants",
-    desc: "",
+    desc: "Team up in a duo to bring your Script2Screen vision to innovation!",
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Team up in a duo to bring your Script2Screen vision to innovation! Imagination meets execution as creativity and strategy combine. Only the most innovative minds will shine on this stage.",
+        content: " Imagination meets execution as creativity and strategy combine. Only the most innovative minds will shine on this stage.",
       },
       {
         heading: "Event Structure",

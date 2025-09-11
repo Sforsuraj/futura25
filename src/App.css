@@ -112,7 +112,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
-  padding: 20%; /* removed the 20% padding */
+  padding: 25%; /* removed the 20% padding */
   max-width: 90%; /* ensures text doesn’t overflow */
   word-wrap: break-word;
 }
@@ -126,7 +126,7 @@ body {
 }
 
 .hero-content img{
-  padding-top: 15%;
+  padding-top: 25%;
 }
 
 .hero-content p {
