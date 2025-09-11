@@ -125,6 +125,10 @@ body {
   line-height: 1.2;
 }
 
+.hero-content img{
+  padding-top: 15%;
+}
+
 .hero-content p {
   font-size: clamp(0.9rem, 3vw, 1.5rem);
   margin-bottom: 0.5rem;

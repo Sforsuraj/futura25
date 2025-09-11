@@ -40,10 +40,9 @@ const scheduleList = [
   { time: "11:15 AM", action: "End of First Round for Coding Event" },
   { time: "11:15 AM", action: "Snacks Break" },
   { time: "11:30 AM", action: "Start of Non-Technical Events and Next Round of Coding Event" },
-  { time: "01:00 PM", action: "End of All Events" },
-  { time: "01:15 PM", action: "Lunch Break" },
-  { time: "02:30 PM", action: "Assembly for Valedictory" },
-  { time: "02:45 PM", action: "Valedictory Ceremony" },
+  { time: "01:00 PM", action: "Lunch Break" },
+  { time: "02:00 PM", action: "Assembly for Valedictory" },
+  { time: "02:30 PM", action: "Valedictory Ceremony" },
   { time: "04:00 PM", action: "Event Conclusion" },
 ];
 
@@ -111,19 +110,20 @@ const Home: React.FC = () => {
         <div className="about-overlay">
           <div className="about-about">
             <h2>About The Futura</h2>
-            <p>
+            <p><i>
               The Department of Artificial Intelligence and Data Science at Sri Sairam Institute of Technology hosts the National Techfest FUTURA'25. A Festival filled with fascination and excitement comes to provide an oppurtunity to showcase your creative ideas and talents. Get ready to witness the most thrilling challenges.
-            </p>
+              </i></p>
           </div>
           <div className="about-where">
             <h2>Destination</h2>
-            <p>Sri Sai Ram Institute of Technology, West Tambaram, Chennai-44</p>
+            <p><i>Sri Sai Ram Institute of Technology,</i></p>
+            <p><i>West Tambaram, Chennai-44</i></p>
           </div>
           <div className="about-when">
-            <h2>When</h2>
-            <p>
+            <h2>On Air</h2>
+            <p><i>
               Monday 22<sup>nd</sup> September 2025
-            </p>
+              </i></p>
           </div>
         </div>
       </section>
