@@ -68,6 +68,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .navbar a:hover {
@@ -130,6 +131,7 @@ body {
   color: #ffffff;
   font-weight: 500;
 }
+
 
 .hero-content button {
   padding: 0.6rem 1.5rem;

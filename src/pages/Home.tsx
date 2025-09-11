@@ -245,7 +245,7 @@ const Home: React.FC = () => {
 
       {/* Contact */}
       <section id="contact" className="contact">
-        <h2 className="contact-header">Contact Us</h2>
+        <h2 className="contact-header">✆ Contact Us </h2>
         <div className="contact-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2111.1575545924516!2d80.0532325!3d12.9606471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f51f638ddfbb%3A0xf3aef7ec7c8979ba!2sSri%20Sairam%20Institute%20of%20Technology!5e1!3m2!1sen!2sin!4v1757405042246!5m2!1sen!2sin"
