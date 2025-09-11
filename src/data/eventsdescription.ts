@@ -1,14 +1,13 @@
 import image1 from "../assets/event_detail/event1.jpg";
 import image2 from "../assets/event_detail/event2.jpg";
-import image3 from "../assets/event_detail/event3.jpg";
+import image3 from "../assets/event_detail/event5.png";
 import image4 from "../assets/event_detail/event4.jpg";
-import image5 from "../assets/event_detail/event5.jpg";
-import image6 from "../assets/event_detail/event3.jpg";
+import image6 from "../assets/event_detail/events6.png";
 
 export const allEvents = [
     {
   id: "1",
-    image: image2,
+    image: image6,
     title: "Cinelytics",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
@@ -70,7 +69,7 @@ export const allEvents = [
   },
   {
     id: "3",
-    image:image5,
+    image:image3,
     title: "Code Master: A Day of Logic, Teamwork, and Clean Code",
     desc: "",
     sections: [
@@ -137,7 +136,7 @@ export const allEvents = [
   },
     {
   id: "5",
-    image:image5,
+    image:image2,
     title: "Pudhirodu Vilaiyadu – Reliving the 90s & 2Ks",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
