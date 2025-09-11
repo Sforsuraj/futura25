@@ -7,6 +7,7 @@ import { ref, get, set } from "firebase/database";
 interface Member {
   name: string;
   email: string;
+  phone: string;   // ✅ New phone field
   dept: string;
   college: string;
 }
@@ -20,7 +21,7 @@ const Register: React.FC = () => {
 
   const [teamName, setTeamName] = useState("");
   const [members, setMembers] = useState<Member[]>([
-    { name: "", email: "", dept: "", college: "" },
+    { name: "", email: "", phone: "", dept: "", college: "" },
   ]);
   const [loading, setLoading] = useState(false);
 
@@ -36,7 +37,7 @@ const Register: React.FC = () => {
 
   const addMember = () => {
     if (members.length >= MAX_MEMBERS) return;
-    setMembers([...members, { name: "", email: "", dept: "", college: "" }]);
+    setMembers([...members, { name: "", email: "", phone: "", dept: "", college: "" }]);
   };
 
   const removeMember = (index: number) => {
@@ -69,7 +70,7 @@ const Register: React.FC = () => {
 
       alert(`Team "${teamName}" registered successfully for ${event?.title}`);
       setTeamName("");
-      setMembers([{ name: "", email: "", dept: "", college: "" }]);
+      setMembers([{ name: "", email: "", phone: "", dept: "", college: "" }]);
     } catch (error) {
       console.error("Error saving registration:", error);
       alert("Failed to register. Check console for details.");
@@ -81,12 +82,10 @@ const Register: React.FC = () => {
   return (
     <>
       {/* Back button outside container */}
-      
-
       <section className="register-container">
-      <button className="back-button" onClick={() => navigate(-1)}>
-        ← Back
-      </button>
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
         <h2>Register for {event?.title || "Symposium 2025"}</h2>
         <form className="register-form" onSubmit={handleSubmit}>
           <input
@@ -115,6 +114,15 @@ const Register: React.FC = () => {
                 placeholder="Email"
                 value={member.email}
                 onChange={(e) => handleMemberChange(index, e)}
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={member.phone}
+                onChange={(e) => handleMemberChange(index, e)}
+                pattern="[0-9]{10}"   // ✅ optional validation for 10-digit phone
                 required
               />
               <input

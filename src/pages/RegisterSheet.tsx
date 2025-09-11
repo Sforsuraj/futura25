@@ -6,6 +6,7 @@ import * as XLSX from "xlsx";
 interface Member {
   name: string;
   email: string;
+  phone: string;   // ✅ Added phone
   dept: string;
   college: string;
 }
@@ -37,7 +38,7 @@ const RegisterSheet = () => {
                 eventName: info.eventName,
                 teamName,
                 timestamp: info.timestamp,
-                members: info.members,
+                members: info.members || [],
               });
             }
           );
@@ -58,7 +59,7 @@ const RegisterSheet = () => {
     return acc;
   }, {} as Record<string, TeamRegistration[]>);
 
-  // Export to Excel function for given event teams
+  // Export to Excel
   const exportToExcel = (
     eventId: string,
     teams: TeamRegistration[],
@@ -73,15 +74,18 @@ const RegisterSheet = () => {
       };
 
       team.members.forEach((m, i) => {
-        row[`Member ${i + 1} Name`] = m.name;
-        row[`Member ${i + 1} Email`] = m.email;
-        row[`Member ${i + 1} Dept`] = m.dept;
-        row[`Member ${i + 1} College`] = m.college;
+        row[`Member ${i + 1} Name`] = m.name || "-";
+        row[`Member ${i + 1} Email`] = m.email || "-";
+        row[`Member ${i + 1} Phone`] = m.phone || "-";   // ✅ Phone
+        row[`Member ${i + 1} Dept`] = m.dept || "-";
+        row[`Member ${i + 1} College`] = m.college || "-";
       });
 
+      // Fill placeholders if less than 2 members
       for (let i = team.members.length; i < 2; i++) {
         row[`Member ${i + 1} Name`] = "-";
         row[`Member ${i + 1} Email`] = "-";
+        row[`Member ${i + 1} Phone`] = "-";
         row[`Member ${i + 1} Dept`] = "-";
         row[`Member ${i + 1} College`] = "-";
       }
@@ -144,6 +148,7 @@ const RegisterSheet = () => {
                     <React.Fragment key={num}>
                       <th style={thStyle}>Member {num} Name</th>
                       <th style={thStyle}>Member {num} Email</th>
+                      <th style={thStyle}>Member {num} Phone</th> {/* ✅ Added */}
                       <th style={thStyle}>Member {num} Dept</th>
                       <th style={thStyle}>Member {num} College</th>
                     </React.Fragment>
@@ -155,7 +160,7 @@ const RegisterSheet = () => {
               <tbody>
                 {teams.length === 0 && (
                   <tr>
-                    <td colSpan={16} style={noDataStyle}>
+                    <td colSpan={18} style={noDataStyle}>
                       No registrations found.
                     </td>
                   </tr>
@@ -171,6 +176,7 @@ const RegisterSheet = () => {
                         <React.Fragment key={i}>
                           <td style={tdStyle}>{member?.name || "-"}</td>
                           <td style={tdStyle}>{member?.email || "-"}</td>
+                          <td style={tdStyle}>{member?.phone || "-"}</td> {/* ✅ */}
                           <td style={tdStyle}>{member?.dept || "-"}</td>
                           <td style={tdStyle}>{member?.college || "-"}</td>
                         </React.Fragment>
@@ -210,6 +216,9 @@ const RegisterSheet = () => {
     </div>
   );
 };
+
+// ---- styles remain unchanged ----
+
 
 // Styles (Dark Mode)
 const containerStyle: React.CSSProperties = {
