@@ -75,7 +75,7 @@ export const allEvents = [
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Work in pairs and bring your combined skills to the table. Code Master is designed to test how well you think, code, and collaborate. It’s not just about writing programs—it’s about solving problems thoughtfully and efficiently as a team.",
+        content: "Work in pairs and bring your combined skills to the table. Code Master is designed to test how well you think, code, and collaborate. It’s not just about writing programs it’s about solving problems thoughtfully and efficiently as a team.",
       },
       {
         heading: "Event Structure",
@@ -179,7 +179,7 @@ export const allEvents = [
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Form a team of two and dive into a nostalgic journey through Tamil cinema of the 90s and 2k. Collaboration and quick thinking are key as teammates rely on each other’s strengths—from recalling iconic dialogues and recognizing legendary stars to identifying BGMs and acting out movie titles.",
+        content: "Form a team of two and dive into a nostalgic journey through Tamil cinema of the 90s and 2k. Collaboration and quick thinking are key as teammates rely on each other’s strengths from recalling iconic dialogues and recognizing legendary stars to identifying BGMs and acting out movie titles.",
       },
       {
         heading: "Event Structure",
