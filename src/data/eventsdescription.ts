@@ -42,11 +42,11 @@ export const allEvents = [
   id: "2",
     image:image1,
     title: "Script2Screen – Scripted Variants",
-    desc: "Team up in a duo to bring your Script2Screen vision to innovation!",
+    desc: "From Idea to Impact – Script it, Screen it, Shine it!",
     sections: [
       {
         heading: "Team Dynamics",
-        content: " Imagination meets execution as creativity and strategy combine. Only the most innovative minds will shine on this stage.",
+        content: "Team up in a duo to bring your Script2Screen vision to innovation. Where creativity transforms into reality.",
       },
       {
         heading: "Event Structure",
@@ -71,7 +71,7 @@ export const allEvents = [
     id: "3",
     image:image3,
     title: "Code Master: A Day of Logic, Teamwork, and Clean Code",
-    desc: "",
+    desc: "Crack the Code, Master the Day.",
     sections: [
       {
         heading: "Team Dynamics",
@@ -105,11 +105,11 @@ export const allEvents = [
   id: "4",
     image:image4,
     title: "Mystic Reels and Logic Wheels – Mystery is the Game, Logic is the Weapon",
-    desc: "A progressive challenge that tests your logic, debugging, and coding skills in three thrilling rounds.",
+    desc: "Decode the Mystery, Drive with Logic.",
     sections: [
       {
         heading: "Team Dynamics",
-        content: "A progressive challenge that tests your logic, debugging, and coding skills in three thrilling rounds.",
+        content: "Pair up to solve : combined  logic, united in skill. Every mystery meets its match.",
       },
       {
         heading: "Event Structure",
@@ -138,7 +138,7 @@ export const allEvents = [
   id: "5",
     image:image2,
     title: "Pudhirodu Vilaiyadu – Reliving the 90s & 2Ks",
-    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+    desc: "Where Nostalgia Meets Challenge!",
     sections: [
       {
         heading: "Team Dynamics",
