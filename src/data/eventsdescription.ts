@@ -2,13 +2,13 @@ import image1 from "../assets/event_detail/event1.jpg";
 import image2 from "../assets/event_detail/event2.jpg";
 import image3 from "../assets/event_detail/event3.jpg";
 import image4 from "../assets/event_detail/event4.jpg";
-import image5 from "../assets/event_detail/event2.jpg";
+import image5 from "../assets/event_detail/event5.jpg";
 import image6 from "../assets/event_detail/event3.jpg";
 
 export const allEvents = [
     {
   id: "1",
-    image: image1,
+    image: image2,
     title: "Cinelytics",
     desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
     sections: [
@@ -41,7 +41,7 @@ export const allEvents = [
   },
   {
   id: "2",
-    image:image2,
+    image:image1,
     title: "Script2Screen – Scripted Variants",
     desc: "",
     sections: [
@@ -70,13 +70,13 @@ export const allEvents = [
   },
   {
     id: "3",
-    image:image3,
+    image:image5,
     title: "Code Master: A Day of Logic, Teamwork, and Clean Code",
     desc: "",
     sections: [
       {
         heading: "Team Dynamics",
-        content: "Work in pairs and bring your combined skills to the table. Coder Dhinam is designed to test how well you think, code, and collaborate. It’s not just about writing programs—it’s about solving problems thoughtfully and efficiently as a team.",
+        content: "Work in pairs and bring your combined skills to the table. Code Master is designed to test how well you think, code, and collaborate. It’s not just about writing programs—it’s about solving problems thoughtfully and efficiently as a team.",
       },
       {
         heading: "Event Structure",

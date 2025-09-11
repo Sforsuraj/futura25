@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { database } from "../firebase";
-import { ref, onValue, off } from "firebase/database";
+import { ref, onValue, off, remove } from "firebase/database";
 import * as XLSX from "xlsx";
 
 interface Member {
@@ -30,15 +30,17 @@ const RegisterSheet = () => {
 
       if (val) {
         Object.entries(val).forEach(([eventId, teams]) => {
-          Object.entries(teams as Record<string, any>).forEach(([teamName, info]) => {
-            tableData.push({
-              eventId,
-              eventName: info.eventName,
-              teamName,
-              timestamp: info.timestamp,
-              members: info.members,
-            });
-          });
+          Object.entries(teams as Record<string, any>).forEach(
+            ([teamName, info]) => {
+              tableData.push({
+                eventId,
+                eventName: info.eventName,
+                teamName,
+                timestamp: info.timestamp,
+                members: info.members,
+              });
+            }
+          );
         });
       }
 
@@ -46,7 +48,6 @@ const RegisterSheet = () => {
     };
 
     onValue(dbRef, listener);
-
     return () => off(dbRef, "value", listener);
   }, []);
 
@@ -58,7 +59,11 @@ const RegisterSheet = () => {
   }, {} as Record<string, TeamRegistration[]>);
 
   // Export to Excel function for given event teams
-  const exportToExcel = (eventId: string, teams: TeamRegistration[], eventName: string) => {
+  const exportToExcel = (
+    eventId: string,
+    teams: TeamRegistration[],
+    eventName: string
+  ) => {
     const data = teams.map((team) => {
       const row: Record<string, string> = {
         "Event ID": team.eventId,
@@ -91,6 +96,18 @@ const RegisterSheet = () => {
     XLSX.writeFile(workbook, `${eventId}_${eventName}_registrations.xlsx`);
   };
 
+  // Delete team registration
+  const deleteRegistration = async (eventId: string, teamName: string) => {
+    try {
+      const teamRef = ref(database, `/registrations/${eventId}/${teamName}`);
+      await remove(teamRef);
+      alert(`Registration for team "${teamName}" deleted successfully!`);
+    } catch (error) {
+      console.error("Error deleting registration:", error);
+      alert("Failed to delete registration.");
+    }
+  };
+
   return (
     <div style={containerStyle}>
       <h1 style={headerStyle}>Event Registrations Sheets</h1>
@@ -99,13 +116,18 @@ const RegisterSheet = () => {
         <div key={eventId} style={cardStyle}>
           <div style={cardHeaderStyle}>
             <h2 style={{ margin: 0 }}>
-              Event ID: <span style={{ color: "#787171ff" }}>{eventId}</span> — {teams[0]?.eventName || ""}
+              Event ID: <span style={{ color: "#787171ff" }}>{eventId}</span> —{" "}
+              {teams[0]?.eventName || ""}
             </h2>
             <button
-              onClick={() => exportToExcel(eventId, teams, teams[0]?.eventName || "Event")}
+              onClick={() =>
+                exportToExcel(eventId, teams, teams[0]?.eventName || "Event")
+              }
               style={buttonStyle}
               disabled={teams.length === 0}
-              title={teams.length === 0 ? "No data to export" : "Download as Excel"}
+              title={
+                teams.length === 0 ? "No data to export" : "Download as Excel"
+              }
             >
               Download as Excel
             </button>
@@ -127,12 +149,13 @@ const RegisterSheet = () => {
                     </React.Fragment>
                   ))}
                   <th style={thStyle}>Timestamp</th>
+                  <th style={thStyle}>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {teams.length === 0 && (
                   <tr>
-                    <td colSpan={15} style={noDataStyle}>
+                    <td colSpan={16} style={noDataStyle}>
                       No registrations found.
                     </td>
                   </tr>
@@ -142,7 +165,7 @@ const RegisterSheet = () => {
                     <td style={tdStyle}>{team.eventId}</td>
                     <td style={tdStyle}>{team.eventName}</td>
                     <td style={tdStyle}>{team.teamName}</td>
-                    {[0, 1,].map((i) => {
+                    {[0, 1].map((i) => {
                       const member = team.members[i];
                       return (
                         <React.Fragment key={i}>
@@ -153,7 +176,24 @@ const RegisterSheet = () => {
                         </React.Fragment>
                       );
                     })}
-                    <td style={tdStyle}>{new Date(team.timestamp).toLocaleString()}</td>
+                    <td style={tdStyle}>
+                      {new Date(team.timestamp).toLocaleString()}
+                    </td>
+                    <td style={tdStyle}>
+                      <button
+                        onClick={() =>
+                          deleteRegistration(team.eventId, team.teamName)
+                        }
+                        style={{
+                          ...buttonStyle,
+                          backgroundColor: "red",
+                          fontSize: "0.85rem",
+                          padding: "0.4rem 0.8rem",
+                        }}
+                      >
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -162,7 +202,11 @@ const RegisterSheet = () => {
         </div>
       ))}
 
-      {registrations.length === 0 && <p style={{ textAlign: "center", marginTop: "2rem" }}>No registrations available.</p>}
+      {registrations.length === 0 && (
+        <p style={{ textAlign: "center", marginTop: "2rem" }}>
+          No registrations available.
+        </p>
+      )}
     </div>
   );
 };
@@ -171,9 +215,9 @@ const RegisterSheet = () => {
 const containerStyle: React.CSSProperties = {
   padding: "2rem",
   fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-  backgroundColor: "#121212", // dark background
+  backgroundColor: "#121212",
   minHeight: "100vh",
-  color: "#e0e0e0", // light text
+  color: "#e0e0e0",
 };
 
 const headerStyle: React.CSSProperties = {
@@ -185,7 +229,7 @@ const headerStyle: React.CSSProperties = {
 };
 
 const cardStyle: React.CSSProperties = {
-  backgroundColor: "#1e1e1e", // card dark gray
+  backgroundColor: "#1e1e1e",
   borderRadius: 10,
   boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
   padding: "1rem 1.5rem 2rem 1.5rem",
@@ -204,7 +248,7 @@ const cardHeaderStyle: React.CSSProperties = {
 };
 
 const buttonStyle: React.CSSProperties = {
-  backgroundColor: "#3a3a3a", // dark gray button
+  backgroundColor: "#3a3a3a",
   border: "none",
   color: "#ffffff",
   padding: "0.5rem 1.25rem",
@@ -220,7 +264,7 @@ const tableWrapperStyle: React.CSSProperties = {
   maxHeight: 400,
   overflowY: "auto",
   borderRadius: 6,
-  border: "1px solid #333", // darker border
+  border: "1px solid #333",
 };
 
 const tableStyle: React.CSSProperties = {
@@ -234,7 +278,7 @@ const tableStyle: React.CSSProperties = {
 const thStyle: React.CSSProperties = {
   position: "sticky",
   top: 0,
-  backgroundColor: "#2c2c2c", // dark header
+  backgroundColor: "#2c2c2c",
   color: "#f5f5f5",
   padding: "10px 12px",
   borderBottom: "2px solid #444",
@@ -260,6 +304,5 @@ const noDataStyle: React.CSSProperties = {
   color: "#777",
   fontStyle: "italic",
 };
-
 
 export default RegisterSheet;
