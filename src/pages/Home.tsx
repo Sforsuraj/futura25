@@ -98,7 +98,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section id="hero" className="hero-container">
         <div className="hero-content">
-          <img src={title} style={{ width: "100%",}} />
+          <img src={title} style={{width:"100%"}} />
           <p>Explore, Innovate, and Celebrate Knowledge</p>
           <CountdownTimer />
           <a href="#events">

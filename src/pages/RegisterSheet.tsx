@@ -79,7 +79,7 @@ const RegisterSheet = () => {
         row[`Member ${i + 1} College`] = m.college;
       });
 
-      for (let i = team.members.length; i < 4; i++) {
+      for (let i = team.members.length; i < 2; i++) {
         row[`Member ${i + 1} Name`] = "-";
         row[`Member ${i + 1} Email`] = "-";
         row[`Member ${i + 1} Dept`] = "-";
