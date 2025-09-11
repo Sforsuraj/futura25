@@ -12,7 +12,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/event/:id" element={<EventDetail />} />
         <Route path="/register/:id" element={<RegisterPage />} />
-        <Route path="/registersheet" element={<RegisterSheet />} />
+        <Route path="/register@123" element={<RegisterSheet />} />
       </Routes>
     </Router>
   );
