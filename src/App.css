@@ -557,6 +557,11 @@ body {
 
 }
 
+.contact-detail p {
+  margin: 0.5rem 0;
+  color: #FFD700;
+}
+
 /* ---------------------- Footer ---------------------- */
 .footer {
   background: rgba(26, 26, 26, 0.8); /* translucent background */

@@ -30,7 +30,7 @@ const faqList = [
   { question: "Will OD recommendation letters be provided ?", answer: "No recommendation letter will be provided instead you will receive an invite from our side after registration." },
   { question: "Dress Code ?", answer: "Formal Dress Code is mandatory and participants without their ID cards are not allowed." },
   { question: "Need to bring Laptops ?", answer: "Yes, Participants who're participating in Technical events must bring their Laptops." },
-  { question: "Is Transport Facility Available ?", answer: "Yes, Route Buses are available for the participants" },
+  { question: "Is On-Spot Registration Available?", answer: "No, Unfortunately On-Spot Registrations aren't Available" },
 ];
 
 const scheduleList = [

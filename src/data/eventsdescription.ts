@@ -175,7 +175,7 @@ export const allEvents = [
   id: "6",
     image:image6,
     title: "CINE CITIZENS: A DEEP DIVE INTO KOLLYWOOD.",
-    desc: "A competitive event focusing on problem-solving, code efficiency, and teamwork.",
+    desc: "Rewind, Relive, Rock It: Unleash Your Kollywood Nostalgia in the Ultimate Cinematic Showdown!",
     sections: [
       {
         heading: "Team Dynamics",
