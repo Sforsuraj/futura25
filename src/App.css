@@ -576,7 +576,7 @@ body {
   background-color: #1a1a1a;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(255, 230, 0, 0.2);
  }
 
 .event-detail h2, .register-container h2 {
@@ -612,6 +612,25 @@ body {
 .hello{
   flex-direction: space-between;
 }
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1); /* translucent white */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px); /* glass effect */
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px); /* elevate upwards */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* shadow */
+}
+ 
 
 .register-form button:hover {
   background: linear-gradient(90deg, #FFD700, #ff4d4f);

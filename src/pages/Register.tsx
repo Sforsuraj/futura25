@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { allEvents } from "../data/events";
 import { database } from "../firebase";
 import { ref, get, set } from "firebase/database";
@@ -15,6 +15,7 @@ const MAX_MEMBERS = 2;
 
 const Register: React.FC = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const event = allEvents.find((e) => e.id === id);
 
   const [teamName, setTeamName] = useState("");
@@ -34,7 +35,7 @@ const Register: React.FC = () => {
   };
 
   const addMember = () => {
-    if (members.length >= MAX_MEMBERS) return; // prevent adding more than 4
+    if (members.length >= MAX_MEMBERS) return;
     setMembers([...members, { name: "", email: "", dept: "", college: "" }]);
   };
 
@@ -51,7 +52,6 @@ const Register: React.FC = () => {
     try {
       const safeTeamName = teamName.replace(/[.$#[\]/]/g, "_");
       const eventNode = `registrations/event_${id}`;
-
       const eventRef = ref(database, `${eventNode}/${safeTeamName}`);
 
       const snapshot = await get(eventRef);
@@ -79,81 +79,88 @@ const Register: React.FC = () => {
   };
 
   return (
-    <section className="register-container">
-      <h2>Register for {event?.title || "Symposium 2025"}</h2>
-      <form className="register-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="teamName"
-          placeholder="Team Name"
-          value={teamName}
-          onChange={handleTeamChange}
-          required
-        />
+    <>
+      {/* Back button outside container */}
+      
 
-        {members.map((member, index) => (
-          <div key={index} className="member-container">
-            <h3>Member {index + 1}</h3>
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={member.name}
-              onChange={(e) => handleMemberChange(index, e)}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={member.email}
-              onChange={(e) => handleMemberChange(index, e)}
-              required
-            />
-            <input
-              type="text"
-              name="dept"
-              placeholder="Department"
-              value={member.dept}
-              onChange={(e) => handleMemberChange(index, e)}
-              required
-            />
-            <input
-              type="text"
-              name="college"
-              placeholder="College Name"
-              value={member.college}
-              onChange={(e) => handleMemberChange(index, e)}
-              required
-            />
-            {members.length > 1 && (
-              <button
-                type="button"
-                className="remove-member"
-                onClick={() => removeMember(index)}
-              >
-                Remove Member
-              </button>
-            )}
-          </div>
-        ))}
+      <section className="register-container">
+      <button className="back-button" onClick={() => navigate(-1)}>
+        ← Back
+      </button>
+        <h2>Register for {event?.title || "Symposium 2025"}</h2>
+        <form className="register-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="teamName"
+            placeholder="Team Name"
+            value={teamName}
+            onChange={handleTeamChange}
+            required
+          />
 
-        {members.length < MAX_MEMBERS && (
-          <button
-            type="button"
-            className="add-member"
-            onClick={addMember}
-          >
-            + Add Member
+          {members.map((member, index) => (
+            <div key={index} className="member-container">
+              <h3>Member {index + 1}</h3>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={member.name}
+                onChange={(e) => handleMemberChange(index, e)}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={member.email}
+                onChange={(e) => handleMemberChange(index, e)}
+                required
+              />
+              <input
+                type="text"
+                name="dept"
+                placeholder="Department"
+                value={member.dept}
+                onChange={(e) => handleMemberChange(index, e)}
+                required
+              />
+              <input
+                type="text"
+                name="college"
+                placeholder="College Name"
+                value={member.college}
+                onChange={(e) => handleMemberChange(index, e)}
+                required
+              />
+              {members.length > 1 && (
+                <button
+                  type="button"
+                  className="remove-member"
+                  onClick={() => removeMember(index)}
+                >
+                  Remove Member
+                </button>
+              )}
+            </div>
+          ))}
+
+          {members.length < MAX_MEMBERS && (
+            <button
+              type="button"
+              className="add-member"
+              onClick={addMember}
+            >
+              + Add Member
+            </button>
+          )}
+
+          <button type="submit" disabled={loading}>
+            {loading ? "Registering..." : "Submit Registration"}
           </button>
-        )}
-
-
-        <button type="submit" disabled={loading}>
-          {loading ? "Registering..." : "Submit Registration"}
-        </button>
-      </form>
-    </section>
+        </form>
+      </section>
+    </>
   );
 };
 
