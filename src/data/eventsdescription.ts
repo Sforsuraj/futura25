@@ -86,7 +86,7 @@ export const allEvents = [
           },
           {
             subheading: "Round 1 – Online Quiz",
-            content: "TThis round will be held on platforms like HackerRank. Participants will answer multiple-choice questions, including predicting outputs for given programs and tackling conceptual challenges. Accuracy and quick thinking are key to moving forward.",
+            content: "This round will be held on platforms like Wayground. Participants will answer multiple-choice questions, including predicting outputs for given programs and tackling conceptual challenges. Accuracy and quick thinking are key to moving forward.",
           },
           {
             subheading: "Round 2 – Problem-Solving Challenge",
