@@ -105,26 +105,23 @@ export const allEvents = [
   id: "4",
     image:image4,
     title: "Mystic Reels and Logic Wheels – Mystery is the Game, Logic is the Weapon",
-    desc: "A progressive challenge that tests your logic, debugging, and coding skills in three thrilling rounds.",
+    desc: "Crack it, fix it, conquer it!",
     sections: [
       {
         heading: "Team Dynamics",
-        content: "A progressive challenge that tests your logic, debugging, and coding skills in three thrilling rounds.",
+        content: "A thrilling event focusing on logic, coding, and cryptography. Each team will showcase their skills in debugging, problem-solving, and decoding hidden messages.",
       },
       {
         heading: "Event Structure",
+        content:"The competition unfolds in two exciting rounds, each designed to challenge different aspects of your technical and logical abilities:",
         subsections: [
           {
-            subheading: "Round 1 – Logic Breaker",
-            content: "• Find and fix bugs in 3–4 small programs.\n• Points for identifying; full credit for fixing.",
+            subheading: "Round 1 – Code & Debug Challenge",
+            content: "•	Teams face medium-level debugging problems. \n•	Followed by small coding tasks inspired by popular movies. \n•	Quick thinking and sharp debugging skills earn higher scores. \n•	Winning criteria: Number of problems solved accurately within the time limit.",
           },
           {
-            subheading: "Round 2 – Technical Mystery Quiz",
-            content: "• Fast-paced quiz on programming concepts, debugging, DS & algorithms.\n• Only top scorers unlock Round 3.",
-          },
-          {
-            subheading: "Round 3 – Mini Coding Challenge (Hackerrank)",
-            content: "• Solve coding problems with a hint-based scoring system.\n• Winners decided by score + speed.",
+            subheading: "Round 2 – Crack the Code",
+            content: "•	Teams are given encrypted messages or hashes. \n•	Your task: decrypt them using algorithms like Base64, Caesar Cipher, and more. \n•	Accuracy, speed, and logical approach determine the winners. \n•	The team that deciphers the most codes with precision takes the crown!",
           },
         ],
       },
