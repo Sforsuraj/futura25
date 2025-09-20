@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { allEvents } from "../data/eventsdescription";
 import { useEffect } from "react";
 
@@ -11,7 +11,7 @@ const EventDetail: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  if (!event) return <h2>❌ Event not found</h2>;
+  if (!event) return <h2> Event not found</h2>;
 
   return (
     <div
