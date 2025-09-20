@@ -101,7 +101,7 @@ const Home: React.FC = () => {
           <p>Explore, Innovate, and Celebrate Knowledge</p>
           <CountdownTimer />
           <a href="#events">
-            <button>Registerations closed</button>
+            <button disabled>Registerations closed</button>
           </a>
         </div>
       </section>
